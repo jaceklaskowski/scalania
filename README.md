@@ -1,6 +1,8 @@
-scalania
-========
+## Scalania - exercises to learn Scala
 
-The site is heavily influenced by https://github.com/mojombo/mojombo.github.io.
+http://scalania.pl
 
-Spotkania z językiem Scala
+### Used
+* https://github.com/kobmic/plain-scala.g8
+* http://aperiodic.net/phil/scala/s-99/
+>>>>>>> P01 from S99
