@@ -2,7 +2,7 @@
 
 There's an idea to host regular Scala hackathons in Warsaw, Poland and the project is to let people get started code-wise.
 
-This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are meant to help people learn Scala while solving problems as described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html.
+This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are meant to help people learn Scala while solving problems as described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html).
 
 The website of the event is http://scalania.pl.
 
@@ -30,7 +30,7 @@ The website of the event is http://scalania.pl.
 
 * Once all the tests get green, you're done.
 
-### Want to contribute?
+### How to contribute
 Fork [the project](https://github.com/jaceklaskowski/scalania) and send pull requests on GitHub.
 
 Please use topic branches when sending pull requests rather than committing directly to master in order to minimize unnecessary merge commit clutter.
