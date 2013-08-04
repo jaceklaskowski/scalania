@@ -44,7 +44,7 @@ The website of the event is http://scalania.pl.
         [error] Total time: 4 s, completed Aug 3, 2013 2:43:35 PM
         1. Waiting for source changes... (press enter to interrupt)
 
-* Once all the tests get green (the `success` shows up as a result of running the tests), you're basically done.
+* Once all the tests get green (the `success` shows up as a result of running the tests), you're almost done.
 
         [info] Compiling 1 Scala source to /Users/jacek/oss/scalania/target/scala-2.10/classes...
         [info] P02Spec
@@ -67,6 +67,19 @@ The website of the event is http://scalania.pl.
         [info] 1 example, 0 failure, 0 error
         [info] Passed: : Total 3, Failed 0, Errors 0, Passed 3, Skipped 0
         [success] Total time: 7 s, completed Aug 3, 2013 2:46:50 PM
+
+* "Almost" makes a difference really. To finish the exercises, run `sbt scalastyle` to ensure high quality of your solutions that is manifested with `Found 0 errors` and `Found 0 warnings` in the output.
+
+        $ sbt scalastyle
+        [info] Loading global plugins from /Users/jacek/.sbt/plugins
+        [info] Loading project definition from /Users/jacek/oss/scalania/project
+        [info] Set current project to scalania (in build file:/Users/jacek/oss/scalania/)
+        Processed 3 file(s)
+        Found 0 errors
+        Found 0 warnings
+        Finished in 6 ms
+        [success] created: /Users/jacek/oss/scalania/target/scalastyle-result.xml
+        [success] Total time: 1 s, completed Aug 4, 2013 11:46:34 AM
 
 ### How to contribute
 A quite productive approach to master Scala is to further extend the project with new tests that show what the language can offer.
