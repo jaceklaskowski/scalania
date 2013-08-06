@@ -12,6 +12,4 @@ project/plugins/project/
 # Scala-IDE specific
 .scala_dependencies
 
-_site/
-answers/
-exercises/
+.DS_Store
