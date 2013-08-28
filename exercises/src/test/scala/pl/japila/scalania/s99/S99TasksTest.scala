@@ -28,7 +28,7 @@ class S99TasksTest extends mutable.Specification {
       solution.p2(List(1, 1, 2, 3, 5, 8)) == 5
     }
     "Find the Kth element of a list." in {
-      solution.p3(List(1, 1, 2, 3, 5, 8)) == 2
+      solution.p3(2, List(1, 1, 2, 3, 5, 8)) == 2
     }
     "Find the number of elements of a list." in {
       solution.p4(List(1, 1, 2, 3, 5, 8)) == 6
