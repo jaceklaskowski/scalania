@@ -42,8 +42,7 @@ class S99TasksSolutionNotImplemented extends S99TasksSolution {
   
   def p2[T](list: Seq[T]): T = ???
 
-  @tailrec
-  final def p3[T](k: Int, l: Seq[T]): T = ???
+  def p3[T](k: Int, l: Seq[T]): T = ???
 
   def p4(list: Seq[_]): Int = ???
 
