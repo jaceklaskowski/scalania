@@ -37,7 +37,8 @@ class S99TasksTest extends mutable.Specification {
       solution.p5(List(1, 1, 2, 3, 5, 8)) must listMatch(List(8, 5, 3, 2, 1, 1))
     }
     "Find out whether a list is a palindrome." in {
-      solution.p6( List(1, 1, 2, 3, 5, 8)) must beTrue
+      solution.p6( List(1, 1, 2, 3, 5, 8)) must beFalse
+      solution.p6( List(1, 1, 2, 1, 1)) must beTrue
     }
     " Flatten a nested list structure." in {
       solution.p7(List(List(1, 1), 2, List(3, List(5, 8)))) must listMatch(List(1, 1, 2, 3, 5, 8))
