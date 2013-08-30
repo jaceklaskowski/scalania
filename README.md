@@ -1,16 +1,16 @@
 ## [Scalania](http://scalania.pl) - exercises to learn Scala
 
-There's an idea to host regular [Scala](http://scala-lang.org) hackathons in Warsaw, Poland and the project is to let people get started code-wise.
+There's an idea to host regular [Scala](http://scala-lang.org) hack-a-thons in Warsaw, Poland and the project is to let people get started code-wise.
 
-This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are meant to help people learn Scala while solving problems as described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and do the exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html).
+This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are supposed to help people learn (and ultimately master) Scala while solving problems as described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and do the exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html).
 
-The website of the event is http://scalania.pl.
+The website of the meetings is http://scalania.pl.
 
 ### How to get started with the project
 * Download [sbt](http://www.scala-sbt.org/).
-* Run `sbt 'project exercises' ~test`
+* Run `sbt ~exercises/test`
 
-        $ sbt 'project exercises' ~test
+        $ sbt ~exercises/test
         [info] Loading global plugins from /Users/jacek/.sbt/plugins
         [info] Loading project definition from /Users/jacek/oss/scalania/project
         [info] Set current project to scalania (in build file:/Users/jacek/oss/scalania/)
@@ -75,10 +75,10 @@ Make the tests pass (make them all green). In the above snippet the problems P01
         [info] Passed: : Total 3, Failed 0, Errors 0, Passed 3, Skipped 0
         [success] Total time: 3 s, completed Aug 6, 2013 8:15:51 PM
 
-* "Almost" makes a difference really. To finish the exercises, run `sbt 'project exercises' scalastyle` to ensure high quality of your solutions that is manifested with `Found 0 errors` and `Found 0 warnings` in the output.
+* (FIXME) "Almost" makes a difference, really. To finish the exercises, run `sbt exercises/scalastyle` to ensure high quality of your solutions that is manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         jacek:~/oss/scalania
-        $ sbt 'project exercises' scalastyle
+        $ sbt exercises/scalastyle
         [info] Loading global plugins from /Users/jacek/.sbt/plugins
         [info] Loading project definition from /Users/jacek/oss/scalania/project
         [info] Set current project to scalania (in build file:/Users/jacek/oss/scalania/)
