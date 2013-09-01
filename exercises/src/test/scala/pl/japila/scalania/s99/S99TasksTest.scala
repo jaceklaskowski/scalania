@@ -37,7 +37,8 @@ class S99TasksTest extends mutable.Specification {
       solution.p5(List(1, 1, 2, 3, 5, 8)) must listMatch(List(8, 5, 3, 2, 1, 1))
     }
     "Find out whether a list is a palindrome." in {
-      solution.p6( List(1, 1, 2, 3, 5, 8)) must beTrue
+      solution.p6( List(1, 1, 2, 3, 5, 8)) must beFalse
+      solution.p6( List(1, 1, 2, 1, 1)) must beTrue
     }
     " Flatten a nested list structure." in {
       solution.p7(List(List(1, 1), 2, List(3, List(5, 8)))) must listMatch(List(1, 1, 2, 3, 5, 8))
@@ -52,7 +53,7 @@ class S99TasksTest extends mutable.Specification {
       solution.p10(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch(  List((4,'a), (1,'b), (2,'c), (2,'a), (1,'d), (4,'e)))
     }
     " Modified run-length encoding." in {
-      solution.p11(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch( List((4,'a), 'b, (2,'c), (2,'a), 'd, (4,'e)))
+      solution.p11(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch( List(Left((4,'a)), Right('b), Left((2,'c)), Left((2,'a)), Right('d), Left((4,'e))))
     }
     "Decode a run-length encoded list." in {
       solution.p12(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e))) must listMatch( List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)  )
