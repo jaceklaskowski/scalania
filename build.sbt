@@ -4,8 +4,6 @@ organization := "pl.japila"
 
 version := "0.1.0-SNAPSHOT"
 
-sbtVersion in Global := "0.13.0"
-
 scalaVersion in Global := "2.10.3-RC1"
 
 scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature")
@@ -19,5 +17,10 @@ libraryDependencies in Global ++= Seq(
 )
 
 resolvers in Global ++= Seq(
-	"snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
-	"releases"  at "http://oss.sonatype.org/content/repositories/releases")
+  "snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
+  "releases"  at "http://oss.sonatype.org/content/repositories/releases")
+
+lazy val exercises = project
+
+lazy val answers = 
+  project.dependsOn(exercises % "test->test;compile->compile")
