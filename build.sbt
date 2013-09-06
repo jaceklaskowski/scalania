@@ -2,7 +2,7 @@ name := "scalania"
 
 organization := "pl.japila"
 
-version := "0.1.0-SNAPSHOT"
+version in Global := "0.1.0-SNAPSHOT"
 
 scalaVersion in Global := "2.10.3-RC1"
 
