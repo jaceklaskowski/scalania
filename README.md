@@ -7,7 +7,7 @@ This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are sup
 The website of the meetings is http://scalania.pl.
 
 ### How to get started with the project
-* Download [sbt](http://www.scala-sbt.org/).
+* Download the latest version of [sbt](http://www.scala-sbt.org/).
 * Run `sbt ~exercises/test`
 
         $ sbt ~exercises/test
