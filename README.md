@@ -75,7 +75,7 @@ Make the tests pass (make them all green). In the above snippet the problems P01
         [info] Passed: : Total 3, Failed 0, Errors 0, Passed 3, Skipped 0
         [success] Total time: 3 s, completed Aug 6, 2013 8:15:51 PM
 
-* (FIXME) "Almost" makes a difference, really. To finish the exercises, run `sbt exercises/scalastyle` to ensure high quality of your solutions that is manifested with `Found 0 errors` and `Found 0 warnings` in the output.
+* "Almost" makes a difference, really. To finish the exercises, run `sbt exercises/scalastyle` to ensure high quality of your solutions that is manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         jacek:~/oss/scalania
         $ sbt exercises/scalastyle
