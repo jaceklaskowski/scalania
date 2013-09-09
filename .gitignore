@@ -13,4 +13,5 @@ project/plugins/project/
 .scala_dependencies
 
 _site/
-
+answers/
+exercises/
