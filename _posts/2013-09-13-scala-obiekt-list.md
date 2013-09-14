@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Obiekt scala.List w języku Scala"
+title: "Obiekt List w języku Scala"
 ---
 
 <a href="http://www.scala-lang.org/"><img border="0" src="{{ site.baseurl }}/images/scala-logo.png" /></a>
