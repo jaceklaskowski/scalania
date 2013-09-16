@@ -13,11 +13,11 @@ Przyjrzyjmy się klasie [List](http://www.scala-lang.org/api/current/index.html#
 
 Zacznijmy od [scaladoc dla tej klasy](http://www.scala-lang.org/api/current/index.html#scala.collection.immutable.List), w której napisano:
 
-> "Klasa \[List\] reprezentuje niezmienniczą listę jednokierunkową z elementami wybranego typu i pewnym porządku"
+> "Klasa List reprezentuje niezmienniczą listę jednokierunkową z elementami wybranego typu i pewnym porządku"
 
 Klasa posiada dwie implementacje - obiekt `scala.Nil` oraz klasę `scala.::`, które udostępniają metody `isEmpty`, `head` oraz `tail`.
 
-Klasa `List` jest dopasowana do problemów, w których potrzeba zastosować ["liniową strukturę danych, w której dane dokładane są na wierzch stosu i z wierzchołka stosu są pobierane"](http://pl.wikipedia.org/wiki/Stos_(informatyka)).
+Klasa `List` jest dopasowana do problemów, w których potrzeba zastosować [_"liniową strukturę danych, w której dane dokładane są na wierzch stosu i z wierzchołka stosu są pobierane"_](http://pl.wikipedia.org/wiki/Stos_\(informatyka\)).
 
 Koszt dodania elementu na początku listy oraz dostępu do elementu początkowego i listy pozostałych jest stały `O(1)`. Natomiast, koszt większości pozostałych operacji - `length`, `append`, `reverse` - wynosi `O(n)` dla `n`-elementowej listy.
 
@@ -33,82 +33,60 @@ Dla przypomnienia: Najefektywniejszymi operacjami na listach jest dostęp do pie
 
 #### ++
 
-```
-scala> List(1,2,3) ++ List(4,5,6)
-res7: List[Int] = List(1, 2, 3, 4, 5, 6)
-```
+	scala> List(1,2,3) ++ List(4,5,6)
+	res7: List[Int] = List(1, 2, 3, 4, 5, 6)
 
 #### ::
 
-```
-scala> 0 :: List(1,2,3)
-res12: List[Int] = List(0, 1, 2, 3)
-```
+	scala> 0 :: List(1,2,3)
+	res12: List[Int] = List(0, 1, 2, 3)
 
 Intensywnie używana w dopasowywaniu wzorców (ang. _pattern matching_) i raczej o "historycznym" znaczeniu, gdyż istniała w innych językach. Korzystać z umiarem na rzecz ```+:```.
 
 #### +:
 
-```
-scala> 0 +: List(1,2,3)
-res29: List[Int] = List(0, 1, 2, 3)
-```
+	scala> 0 +: List(1,2,3)
+	res29: List[Int] = List(0, 1, 2, 3)
 
 #### apply(n: Int): A
 
-```
-scala> List(1,2,3)(0)
-res13: Int = 1
-```
+	scala> List(1,2,3)(0)
+	res13: Int = 1
 
 #### contains(elem: Any): Boolean
 
-```
-scala> List(1,2,3).contains(2)
-res19: Boolean = true
-```
+	scala> List(1,2,3).contains(2)
+	res19: Boolean = true
 
 #### count(p: (A) ⇒ Boolean): Int
 
-```
-scala> List(1,2,3).count( _ > 0)
-res21: Int = 3
-```
+	scala> List(1,2,3).count( _ > 0)
+	res21: Int = 3
 
 #### drop(n: Int): List\[A\]
 
-```
-scala> List(1,2,3).drop(2)
-res22: List[Int] = List(3)
-```
+	scala> List(1,2,3).drop(2)
+	res22: List[Int] = List(3)
 
 #### dropWhile(p: (A) ⇒ Boolean): List\[A\]
 
-```
-scala> List(1,2,3).dropWhile(_ < 2)
-res23: List[Int] = List(2, 3)
-```
+	scala> List(1,2,3).dropWhile(_ < 2)
+	res23: List[Int] = List(2, 3)
 
 #### exists(p: (A) ⇒ Boolean): Boolean
 
-```
-scala> List(1,2,3).exists(_ == 2)
-res24: Boolean = true
-```
+	scala> List(1,2,3).exists(_ == 2)
+	res24: Boolean = true
 
 #### filter(p: (A) ⇒ Boolean): List\[A\]
 
-```
-scala> List(1,2,3).filter(_ % 2 == 1)
-res26: List[Int] = List(1, 3)
-```
+	scala> List(1,2,3).filter(_ % 2 == 1)
+	res26: List[Int] = List(1, 3)
 
 #### filterNot(p: (A) ⇒ Boolean): List\[A\]
 
-```
-scala> List(1,2,3).filterNot(_ % 2 == 1)
-res27: List[Int] = List(2)
-```
+	scala> List(1,2,3).filterNot(_ % 2 == 1)
+	res27: List[Int] = List(2)
 
 #### find(p: (A) ⇒ Boolean): Option\[A\]
 #### flatMap\[B\](f: (A) ⇒ GenTraversableOnce\[B\]): List\[B\]
