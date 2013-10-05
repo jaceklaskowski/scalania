@@ -110,20 +110,33 @@ class S99TasksTest extends mutable.Specification {
       randomPer.intersect(input) == input
       randomPer.diff(input).size == 0
     }
-    "Generate the combinations of K distinct objects chosen from the N elements of a list. WRITE TEST" in {
-      val testspec = "In how many ways can a committee of 3 be chosen from a group of 12 people? " +
-        "We all know that there are C(12,3) = 220 possibilities (C(N,K) denotes the well-known binomial coefficient). " +
-        "For pure mathematicians, this result may be great. But we want to really generate all the possibilities. "
-      val output = solution.p26(3, List('a, 'b, 'c, 'd, 'e, 'f))
-      true == false
-      // WRITE TEST
+    "Generate the combinations of 3 distinct objects, chosen from a 4 element list." in {
+      val input = List('a, 'b, 'c, 'd)
+      val expected = List(List('a, 'b, 'c), List('a, 'b, 'd), List('a, 'c, 'd), List('b, 'c, 'd))
+      solution.p26(3, input) must listMatch(expected)
     }
-    "Group the elements of a set into disjoint subsets. WRITE TEST" in {
+    "Generate all the combinations of a committee of 3, chosen from a group of 12 people." in {
+      val testspec = "We all know that there are C(12,3) = 220 possibilities (C(N,K) denotes the well-known binomial coefficient). " +
+        "For pure mathematicians, this result may be great. But we want to really generate all the possibilities. "
+      val input = List.range(0, 12)
+      val combinations = solution.p26(3, input)
+      combinations.length mustEqual 220
+      combinations.distinct.length mustEqual 220
+    }
+    "Group 9 elements of a set into disjoint subsets of 2, 3 and 4 elements." in {
+      val testspec = "Multinomial coefficients for multisets of 2,3 and 4 elements gives (2,3,4)!=(2+3+4)!/(2!3!4!) = 1260 possibilities"
       val input = List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida")
       val output = solution.p27(input)
-      true == false
-      // write the test code to check the generation or all possibilities
+      output.distinct.length mustEqual 1260
+      output.length mustEqual 1260
     }
+    "Group 3 elements of a set into disjoint subsets of 2 and 1 elements. (generalized version)" in {
+      val inputGroups = List(2,1)
+      val inputElements = List.range(0,3)
+      val expected = List(List(List(0, 1), List(2)), List(List(0, 2) , List(1)), List(List(1, 2), List(0)))
+      solution.p27b(inputGroups, inputElements) must listMatch(expected)
+    }
+    
     " Sorting a list of lists according to length of sublists." in {
       solution.p28(List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))) must listMatch(  List(List('o), List('d, 'e), List('d, 'e), List('m, 'n), List('a, 'b, 'c), List('f, 'g, 'h), List('i, 'j, 'k, 'l)) )
     }
