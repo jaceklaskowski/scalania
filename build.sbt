@@ -12,8 +12,8 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 
 libraryDependencies in Global ++= Seq(
   "junit" % "junit" % "4.11" % "test",
-  "org.scalatest" %% "scalatest" % "2.0.M6" % "test",
-  "org.specs2" %% "specs2" % "2.2" % "test"
+  "org.scalatest" %% "scalatest" % "2.0.RC1-SNAP6" % "test",
+  "org.specs2" %% "specs2" % "2.2.2" % "test"
 )
 
 resolvers in Global ++= Seq(
