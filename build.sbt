@@ -4,7 +4,7 @@ organization := "pl.japila"
 
 version in Global := "0.1.0-SNAPSHOT"
 
-scalaVersion in Global := "2.10.2"
+scalaVersion in Global := "2.10.3"
 
 scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature")
 
