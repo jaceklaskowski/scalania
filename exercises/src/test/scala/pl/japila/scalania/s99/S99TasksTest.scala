@@ -19,15 +19,6 @@ class S99TasksTest extends mutable.Specification {
   }
 
   "S99TasksSolution implementation" should {
-    "Find the last element of a list" in {
-      solution.p1(List(1, 1, 2, 3, 5, 8)) == 8
-    }
-    "Find the last but one element of a list." in {
-      solution.p2(List(1, 1, 2, 3, 5, 8)) == 5
-    }
-    "Find the Kth element of a list." in {
-      solution.p3(2, List(1, 1, 2, 3, 5, 8)) == 2
-    }
     "Find the number of elements of a list." in {
       solution.p4(List(1, 1, 2, 3, 5, 8)) == 6
     }
