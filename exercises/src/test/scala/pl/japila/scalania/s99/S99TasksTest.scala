@@ -19,16 +19,6 @@ class S99TasksTest extends mutable.Specification {
   }
 
   "S99TasksSolution implementation" should {
-    "Find the number of elements of a list." in {
-      solution.p4(List(1, 1, 2, 3, 5, 8)) == 6
-    }
-    "Reverse a list." in {
-      solution.p5(List(1, 1, 2, 3, 5, 8)) must listMatch(List(8, 5, 3, 2, 1, 1))
-    }
-    "Find out whether a list is a palindrome." in {
-      solution.p6(List(1, 1, 2, 3, 5, 8)) must beFalse
-      solution.p6(List(1, 1, 2, 1, 1)) must beTrue
-    }
     " Flatten a nested list structure." in {
       solution.p7(List(List(1, 1), 2, List(3, List(5, 8)))) must listMatch(List(1, 1, 2, 3, 5, 8))
     }
