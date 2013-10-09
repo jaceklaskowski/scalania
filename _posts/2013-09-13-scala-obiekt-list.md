@@ -17,14 +17,14 @@ Za pomocą metody `apply[A](xs: A*): List[A]`, która jest konstruktorem typu `L
 	scala> List("Jeden", "Dwa", "Trzy")
 	res1: List[String] = List(Jeden, Dwa, Trzy)
 
-Oczywiście wszystkie elementy muszą być tego samego typy, albo kompilator sprowadzi typ do wspólnego w hierarchi typów.
+Oczywiście wszystkie elementy muszą być tego samego typu, albo kompilator sprowadzi typ do wspólnego w hierarchi typów.
 
 	scala> List('a, "Dwa", 3)
 	res2: List[Any] = List('a, Dwa, 3)
 
 Stąd też w powyższym przypadku otrzymaliśmy `List[Any]`, w którym `Any` jest najbardziej wspólnym typem dla podanych elementów.
 
-Natomiast w poniższym przykładzie, kopilator Scali wydedukował, że typem wspólnym wszystkich elementów listy będzie `Double`.
+Natomiast w poniższym przykładzie, kompilator Scali wydedukował, że typem wspólnym wszystkich elementów listy będzie `Double`.
 
 	scala> List(1.0, 0x2, 3)
 	res3: List[Double] = List(1.0, 2.0, 3.0)
