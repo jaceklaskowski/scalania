@@ -2,7 +2,6 @@ package pl.japila.scalania.s99
 
 import org.specs2.mutable
 import org.specs2.matcher.{ MatchResult, Expectable, Matcher }
-import org.scalatest.matchers
 
 class S99TasksTest extends mutable.Specification {
 

@@ -10,11 +10,7 @@ scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature")
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
-libraryDependencies in Global ++= Seq(
-  "junit" % "junit" % "4.11" % "test",
-  "org.scalatest" %% "scalatest" % "2.0.RC1-SNAP6" % "test",
-  "org.specs2" %% "specs2" % "2.2.3" % "test"
-)
+libraryDependencies in Global += "org.specs2" %% "specs2" % "2.2.3" % "test"
 
 resolvers in Global ++= Seq(
   "snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
