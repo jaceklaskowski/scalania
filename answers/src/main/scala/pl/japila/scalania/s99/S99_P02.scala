@@ -1,5 +1,5 @@
-package pl.japila.s99
+package pl.japila.scalania.s99
 
-object P02 {
+object S99_P02 {
   def penultimate[A](l: List[A]): A = l.reverse.tail.head
 }
