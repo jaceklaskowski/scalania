@@ -18,21 +18,6 @@ class S99TasksTest extends mutable.Specification {
   }
 
   "S99TasksSolution implementation" should {
-    " Flatten a nested list structure." in {
-      solution.p7(List(List(1, 1), 2, List(3, List(5, 8)))) must listMatch(List(1, 1, 2, 3, 5, 8))
-    }
-    "Eliminate consecutive duplicates of list elements." in {
-      solution.p8(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch(List('a, 'b, 'c, 'a, 'd, 'e))
-    }
-    " Pack consecutive duplicates of list elements into sublists." in {
-      solution.p9(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch(List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e)))
-    }
-    "Run-length encoding of a list." in {
-      solution.p10(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch(List((4, 'a), (1, 'b), (2, 'c), (2, 'a), (1, 'd), (4, 'e)))
-    }
-    " Modified run-length encoding." in {
-      solution.p11(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) must listMatch(List(Left((4, 'a)), Right('b), Left((2, 'c)), Left((2, 'a)), Right('d), Left((4, 'e))))
-    }
     " Extract a slice from a list." in {
       solution.p18(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) must listMatch(List('d, 'e, 'f, 'g))
     }
