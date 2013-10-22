@@ -2,7 +2,7 @@
 
 The project is to help you get started with [Scala](http://scala-lang.org). It's also been used successfully to run Scala hack-a-thons in Warsaw, Poland - see [Scalania](http://scalania.pl) webpage on meetup.
 
-This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are supposed to help people learn (and ultimately master) Scala while solving problems described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and do the exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html).
+This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are supposed to help people learn (and ultimately master) Scala while solving problems described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and do the exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html) or are part of [the Project Euler](http://projecteuler.net/problems).
 
 The website of the meetings is http://scalania.pl.
 
@@ -10,7 +10,7 @@ The website of the meetings is http://scalania.pl.
 * Download the latest version of [sbt](http://www.scala-sbt.org/).
 * Pick a test to work on. There are plenty of them in `exercises/main/scala` directory. Say, you chose `S99_P01`. Run `sbt '~exercises/testOnly *P01*'` (the apostrophes are important to keep `*P01` as the parameter of `testOnly` tasks).
 
-        $ sbt '~exercises/testOnly *P01*'
+        $ sbt '~exercises/testOnly *s99.P01*'
         [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
         [info] Loading project definition from /Users/jacek/oss/scalania/project
         [info] Set current project to scalania (in build file:/Users/jacek/oss/scalania/)
@@ -109,3 +109,4 @@ Please use topic branches when sending pull requests rather than committing dire
 * http://www.scala-sbt.org/
 * https://github.com/kobmic/plain-scala.g8
 * http://aperiodic.net/phil/scala/s-99/
+* https://github.com/pavelfatin/projecteuler
