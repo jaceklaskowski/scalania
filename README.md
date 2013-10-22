@@ -1,94 +1,102 @@
-## [Scalania](http://scalania.pl) - exercises to learn Scala
+## [Scalania](http://scalania.pl) - learn Scala by examples
 
-There's an idea to host regular [Scala](http://scala-lang.org) hack-a-thons in Warsaw, Poland and the project is to let people get started code-wise.
+The project is to help you get started with [Scala](http://scala-lang.org). It's also been used successfully to run Scala hack-a-thons in Warsaw, Poland - see [Scalania](http://scalania.pl) webpage on meetup.
 
-This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are supposed to help people learn (and ultimately master) Scala while solving problems as described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and do the exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html).
+This is a [sbt](http://www.scala-sbt.org/)-based project with tests that are supposed to help people learn (and ultimately master) Scala while solving problems described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) and do the exercises that accompany a Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html).
 
 The website of the meetings is http://scalania.pl.
 
 ### How to get started with the project
 * Download the latest version of [sbt](http://www.scala-sbt.org/).
-* Run `sbt ~exercises/test`
+* Pick a test to work on. There are plenty of them in `exercises/main/scala` directory. Say, you chose `S99_P01`. Run `sbt '~exercises/testOnly *P01*'` (the apostrophes are important to keep `*P01` as the parameter of `testOnly` tasks).
 
-        $ sbt ~exercises/test
-        [info] Loading global plugins from /Users/jacek/.sbt/plugins
+        $ sbt '~exercises/testOnly *P01*'
+        [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
         [info] Loading project definition from /Users/jacek/oss/scalania/project
         [info] Set current project to scalania (in build file:/Users/jacek/oss/scalania/)
-        [info] Set current project to exercises (in build file:/Users/jacek/oss/scalania/)
-        [info] Updating {file:/Users/jacek/oss/scalania/}exercises...
-        [info] Resolving org.scala-lang#scala-reflect;2.10.0 ...
-        [info] Done updating.
-        [info] Compiling 3 Scala sources to /Users/jacek/oss/scalania/exercises/target/scala-2.10/classes...
-        [info] Compiling 3 Scala sources to /Users/jacek/oss/scalania/exercises/target/scala-2.10/test-classes...
-        [info] P03Spec
-        [info] P03 should
-        [info] x Find the Kth element of a list
-        [error]    an implementation is missing (P03.scala:4)
-        [info] Total for specification P03Spec
-        [info] Finished in 32 ms
-        [info] 1 example, 1 failure, 0 error
         [info] P01Spec
-        [info] P01 should
+        [info]
+        [info] P01 solution should
         [info] x Find the last element of a list
-        [error]    an implementation is missing (P01.scala:4)
+        [error]    an implementation is missing (S99_P01.scala:4)
+        [info]
+        [info]
+        [info]
         [info] Total for specification P01Spec
-        [info] Finished in 31 ms
+        [info] Finished in 23 ms
         [info] 1 example, 1 failure, 0 error
-        [info] P02Spec
-        [info] P02 should
-        [info] x Find the last but one element of a list
-        [error]    an implementation is missing (P02.scala:4)
-        [info] Total for specification P02Spec
-        [info] Finished in 3 ms
-        [info] 1 example, 1 failure, 0 error
-        [error] Failed: : Total 3, Failed 3, Errors 0, Passed 0, Skipped 0
+        [error] Failed: Total 1, Failed 1, Errors 0, Passed 0
         [error] Failed tests:
-        [error]         pl.japila.s99.P02Spec
-        [error]         pl.japila.s99.P03Spec
-        [error]         pl.japila.s99.P01Spec
-        [error] (exercises/test:test) sbt.TestsFailedException: Tests unsuccessful
-        [error] Total time: 17 s, completed Aug 6, 2013 7:06:24 AM
+        [error] 	pl.japila.scalania.s99.P01Spec
+        [error] (exercises/test:testOnly) sbt.TestsFailedException: Tests unsuccessful
+        [error] Total time: 3 s, completed Oct 22, 2013 11:27:56 PM
+        1. Waiting for source changes... (press enter to interrupt)
 
-Make the tests pass (make them all green). In the above snippet the problems P01 to P03 fail (an implementation is missing).
+Make the test pass (make it green). In the above snippet the problem `pl.japila.scalania.s99.P01Spec` fails (with the error `an implementation is missing`).
 
-* Once all the tests get green (the `success` shows up as a result of running the tests), you're almost done.
+* Once the test gets green (the `success` shows up as a result of running it), you're almost done.
 
+        [info] Formatting 1 Scala source {file:/Users/jacek/oss/scalania/}exercises(compile) ...
         [info] Compiling 1 Scala source to /Users/jacek/oss/scalania/exercises/target/scala-2.10/classes...
-        [info] P03Spec
-        [info] P03 should
-        [info] + Find the Kth element of a list
-        [info] Total for specification P03Spec
-        [info] Finished in 25 ms
-        [info] 1 example, 0 failure, 0 error
         [info] P01Spec
-        [info] P01 should
+        [info]
+        [info] P01 solution should
         [info] + Find the last element of a list
+        [info]
+        [info]
         [info] Total for specification P01Spec
-        [info] Finished in 24 ms
+        [info] Finished in 46 ms
         [info] 1 example, 0 failure, 0 error
-        [info] P02Spec
-        [info] P02 should
-        [info] + Find the last but one element of a list
-        [info] Total for specification P02Spec
-        [info] Finished in 1 ms
-        [info] 1 example, 0 failure, 0 error
-        [info] Passed: : Total 3, Failed 0, Errors 0, Passed 3, Skipped 0
-        [success] Total time: 3 s, completed Aug 6, 2013 8:15:51 PM
+        [info] Passed: Total 1, Failed 0, Errors 0, Passed 1
+        [success] Total time: 13 s, completed Oct 22, 2013 11:31:20 PM
+
+Press `Enter` to close the sbt session.
 
 * "Almost" makes a difference, really. To finish the exercises, run `sbt exercises/scalastyle` to ensure high quality of your solutions that is manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
-        jacek:~/oss/scalania
         $ sbt exercises/scalastyle
-        [info] Loading global plugins from /Users/jacek/.sbt/plugins
+        [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
         [info] Loading project definition from /Users/jacek/oss/scalania/project
         [info] Set current project to scalania (in build file:/Users/jacek/oss/scalania/)
-        [info] Set current project to scalania-exercises (in build file:/Users/jacek/oss/scalania/)
-        Processed 3 file(s)
+        Processed 13 file(s)
         Found 0 errors
         Found 0 warnings
-        Finished in 5 ms
+        Finished in 8 ms
         [success] created: /Users/jacek/oss/scalania/exercises/target/scalastyle-result.xml
-        [success] Total time: 1 s, completed Aug 6, 2013 7:30:04 PM
+        [success] Total time: 1 s, completed Oct 22, 2013 11:32:54 PM
+
+### How to open the project in IntelliJ IDEA 13 (Cardea)
+* Install the [sbt-idea](https://github.com/mpeltonen/sbt-idea) plugin.
+
+        $ cat ~/.sbt/0.13/plugins/build.sbt
+        // https://github.com/mpeltonen/sbt-idea
+        addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.5.2")
+
+* Run `sbt gen-idea` in the home directory of the project.
+
+        $ sbt gen-idea
+        [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
+        [info] Loading project definition from /Users/jacek/oss/scalania/project
+        [info] Set current project to scalania (in build file:/Users/jacek/oss/scalania/)
+        [info] Creating IDEA module for project 'scalania' ...
+        [info] Resolving org.fusesource.jansi#jansi;1.4 ...
+        [info] Creating IDEA module for project 'answers' ...
+        [info] Resolving org.fusesource.jansi#jansi;1.4 ...
+        [info] Creating IDEA module for project 'exercises' ...
+        [info] Resolving org.fusesource.jansi#jansi;1.4 ...
+        [info] Excluding folder target
+        [info] Created /Users/jacek/oss/scalania/.idea/IdeaProject.iml
+        [info] Created /Users/jacek/oss/scalania/.idea
+        [info] Excluding folder /Users/jacek/oss/scalania/target
+        [info] Created /Users/jacek/oss/scalania/.idea_modules/scalania.iml
+        [info] Excluding folder /Users/jacek/oss/scalania/answers/target
+        [info] Created /Users/jacek/oss/scalania/.idea_modules/answers.iml
+        [info] Excluding folder /Users/jacek/oss/scalania/exercises/target
+        [info] Created /Users/jacek/oss/scalania/.idea_modules/exercises.iml
+        [info] Created /Users/jacek/oss/scalania/.idea_modules/scalania-build.iml
+        [info] Created /Users/jacek/oss/scalania/.idea_modules/exercises-build.iml
+
+* Open the project in IntelliJ IDEA. It's just that easy.
 
 ### How to contribute
 A quite productive approach to master Scala is to further extend the project with new tests that show what the language can offer.
