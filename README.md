@@ -114,9 +114,11 @@ Please use topic branches when sending pull requests rather than committing dire
 
 * Do the work and `git commit` it.
 
-* `git push [github-remote-name] euler_100`
+* `git push origin euler_100`
 
 * Send pull request using GitHub. It should automatically suggest you doing so when your branch has showed up.
+
+* (optional) Once the pull request's accepted, delete the branch from the remote repository `git push origin :euler_100` and from the local repository `git branch -d euler_100`.
 
 ### Tools used
 * http://www.scala-sbt.org/
