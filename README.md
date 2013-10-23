@@ -9,7 +9,7 @@ The website of the meetings is [scalania.pl](http://scalania.pl).
 ### How to get started with the project
 * Download the latest version of [sbt](http://www.scala-sbt.org/).
 * Pick a test to work on. There are plenty of them in `exercises/main/scala` directory.
-Say, you chose `S99_P01`. Run `sbt '~exercises/testOnly *s99.P01*'` (the apostrophes are important to make `*P01*` the parameter of the `testOnly` task).
+Say, you chose `S99_P01`. Run `sbt '~exercises/testOnly *s99.P01*'` (the apostrophes are important to make `*s99.P01*` the parameter of the `testOnly` task).
 
         $ sbt '~exercises/testOnly *s99.P01*'
         [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
