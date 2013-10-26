@@ -54,6 +54,8 @@ Make the test pass (make it green). In the above snippet `pl.japila.scalania.s99
 
 Press `enter` to interrupt and in fact close the sbt session.
 
+Spoiler: There are a few solutions of the exercises that you could execute with `answers/testOnly *s99.P01*`. Just replace `~exercises` with `answers` to kick it off.
+
 * In order to finish the exercises, run `sbt exercises/scalastyle` to ensure high quality of your solutions that is manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         $ sbt exercises/scalastyle

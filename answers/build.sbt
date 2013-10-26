@@ -10,3 +10,5 @@ org.scalastyle.sbt.PluginKeys.config := file("project/scalastyle_config.xml")
 scalariformSettings
 
 jacoco.settings
+
+scalaSource in Test := (scalaSource in LocalProject("exercises") in Test).value

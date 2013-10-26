@@ -16,7 +16,9 @@ resolvers in Global ++= Seq(
   "snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
   "releases"  at "http://oss.sonatype.org/content/repositories/releases")
 
+lazy val scalania = project.in(file(".")).aggregate(exercises)
+
 lazy val exercises = project
 
 lazy val answers = 
-  project.dependsOn(exercises % "test->test;compile->compile")
+  project.dependsOn(exercises % "test->test")
