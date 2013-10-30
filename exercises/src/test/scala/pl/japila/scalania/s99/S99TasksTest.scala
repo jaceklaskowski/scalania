@@ -18,18 +18,6 @@ class S99TasksTest extends mutable.Specification {
   }
 
   "S99TasksSolution implementation" should {
-    " Extract a slice from a list." in {
-      solution.p18(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) must listMatch(List('d, 'e, 'f, 'g))
-    }
-    " Rotate a list N places to the left." in {
-      solution.p19(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) must listMatch(List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c))
-      solution.p19(-2, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)) must listMatch(List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i))
-    }
-    " Remove the Kth element from a list." in {
-      val out = solution.p20(1, List('a, 'b, 'c, 'd))
-      out._1 must listMatch(List('a, 'c, 'd))
-      out._2 == 'b
-    }
     "Insert an element at a given position into a list." in {
       solution.p21('new, 1, List('a, 'b, 'c, 'd)) must listMatch(List('a, 'new, 'b, 'c, 'd))
     }

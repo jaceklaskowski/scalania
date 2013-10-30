@@ -3,9 +3,6 @@ package pl.japila.scalania.s99
 import annotation.tailrec
 
 trait S99TasksSolution {
-  def p18[T](from: Int, to: Int, list: Seq[T]): Seq[T]
-  def p19[T](nr: Int, list: Seq[T]): Seq[T]
-  def p20[T](nr: Int, list: Seq[T]): (Seq[T], T)
   def p21[T](toAdd: T, position: Int, list: Seq[T]): Seq[T]
   def p22(from: Int, to: Int): Seq[Int]
   def p23[T](sel: Int, list: Seq[T]): Seq[T]
@@ -18,11 +15,6 @@ trait S99TasksSolution {
 }
 
 class S99TasksSolutionNotImplemented extends S99TasksSolution {
-  def p18[T](from: Int, to: Int, list: Seq[T]): Seq[T] = ???
-
-  def p19[T](nr: Int, list: Seq[T]): Seq[T] = ???
-
-  def p20[T](nr: Int, list: Seq[T]): (Seq[T], T) = ???
 
   def p21[T](toAdd: T, position: Int, list: Seq[T]): Seq[T] = ???
 
