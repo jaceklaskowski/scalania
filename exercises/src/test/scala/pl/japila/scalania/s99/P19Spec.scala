@@ -1,9 +1,9 @@
 package pl.japila.scalania.s99
 
-import org.specs2.mutable
+import org.specs2.mutable._
 import S99_P19.rotate
 
-class P19Spec extends mutable.Specification {
+class P19Spec extends Specification {
   "P19 solution" should {
     "Rotate a list 3 places to the left." in {
       val actual = rotate(3, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
