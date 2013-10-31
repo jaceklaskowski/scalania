@@ -1,9 +1,9 @@
 package pl.japila.scalania.s99
 
-import org.specs2.mutable
+import org.specs2.mutable._
 import S99_P10.encode
 
-class P10Spec extends mutable.Specification {
+class P10Spec extends Specification {
   "P10 solution" should {
     "Run-length encoding of a list." in {
       val actual = encode(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
