@@ -1,12 +1,12 @@
 package pl.japila.scalania.euler
 
-import org.specs2.mutable
-import Euler_P01.findSumOfMultiplies
+import org.specs2.mutable._
+import Euler_P01.solutions
 
-class P01Spec extends mutable.Specification {
+class P01Spec extends Specification {
   "P01 solution" should {
     "Find the sum of all the multiples of 3 or 5 below 1000." in {
-      findSumOfMultiplies(3, 5, 1000) == 233168
+      solutions.forall { f => f(3, 5, 1000) === 233168 }
     }
   }
 }
