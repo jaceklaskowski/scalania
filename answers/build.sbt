@@ -3,6 +3,8 @@ import JacocoPlugin._
 
 name := "scalania-answers"
 
+libraryDependencies in Global += "org.specs2" %% "specs2" % "2.3.1"
+
 org.scalastyle.sbt.ScalastylePlugin.Settings
 
 org.scalastyle.sbt.PluginKeys.config := file("project/scalastyle_config.xml")
