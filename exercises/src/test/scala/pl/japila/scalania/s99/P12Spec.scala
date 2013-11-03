@@ -1,9 +1,9 @@
 package pl.japila.scalania.s99
 
-import org.specs2.mutable
+import org.specs2.mutable._
 import S99_P12.decode
 
-class P12Spec extends mutable.Specification {
+class P12Spec extends Specification {
   "P12 solution" should {
     "Decode a run-length encoded list." in {
       val expected = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
