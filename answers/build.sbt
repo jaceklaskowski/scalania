@@ -3,7 +3,9 @@ import JacocoPlugin._
 
 name := "scalania-answers"
 
-libraryDependencies in Global += "org.specs2" %% "specs2" % "2.3.1"
+libraryDependencies in Global += "org.specs2" %% "specs2" % "2.4-SNAPSHOT"
+
+resolvers += "Sonatype Snapshots Nexus" at "https://oss.sonatype.org/content/repositories/snapshots"
 
 org.scalastyle.sbt.ScalastylePlugin.Settings
 
