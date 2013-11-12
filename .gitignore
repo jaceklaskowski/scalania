@@ -8,6 +8,8 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+# SBT 0.13.1-RC2
+.history
 
 # Scala-IDE specific
 .scala_dependencies
