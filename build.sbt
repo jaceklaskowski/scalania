@@ -10,11 +10,14 @@ scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature")
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
-libraryDependencies in Global += "org.specs2" %% "specs2" % "2.4-SNAPSHOT" % "test"
+libraryDependencies in Global ++= Seq(
+  "org.specs2" %% "specs2" % "2.4-SNAPSHOT" % "test",
+  "com.netflix.rxjava" % "rxjava-scala" % "0.14.9"
+  )
 
 resolvers in Global ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
-lazy val scalania = project.in(file(".")).aggregate(exercises)
+lazy val scalania = project in file(".") aggregate exercises
 
 lazy val exercises = project
 
