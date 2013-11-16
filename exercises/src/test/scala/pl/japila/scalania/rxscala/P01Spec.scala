@@ -1,4 +1,4 @@
-package pl.japila.scalania.euler
+package pl.japila.scalania.rxscala
 
 import org.specs2.mutable._
 import P01._
