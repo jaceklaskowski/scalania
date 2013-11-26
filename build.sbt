@@ -12,8 +12,8 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 
 libraryDependencies in Global ++= Seq(
   "org.specs2" %% "specs2" % "2.4-SNAPSHOT" % "test",
-  "com.netflix.rxjava" % "rxjava-scala" % "0.14.11"
-  )
+  "com.netflix.rxjava" % "rxjava-scala" % "0.15.1"
+)
 
 resolvers in Global ++= Seq("snapshots", "releases").map(Resolver.sonatypeRepo)
 
