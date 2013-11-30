@@ -2,10 +2,12 @@ package pl.japila.scalania.s99
 
 object S99_P21 {
 
-  val solutions = Seq[(Any, Int, Seq[Any]) => Seq[Any]](
-    insertAt_7680700,
-    insertAt_PawelPanasewicz,
-    insertAt_ajozwik
+  type InsertAtFn = (Any, Int, Seq[Any]) => Seq[Any]
+
+  val solutions: List[(String, InsertAtFn)] = List(
+    ("7680700", insertAt_7680700),
+    ("PawelPanasewicz", insertAt_PawelPanasewicz),
+    ("ajozwik", insertAt_ajozwik)
   )
 
   def insertAt_7680700[T](toAdd: T, position: Int, ts: Seq[T]) = {

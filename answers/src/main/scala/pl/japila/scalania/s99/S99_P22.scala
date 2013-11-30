@@ -2,11 +2,13 @@ package pl.japila.scalania.s99
 
 object S99_P22 {
 
-  val solutions = Seq[(Int, Int) => Seq[Int]](
-    range_7680926,
-    range_mprowaznik,
-    range_ajozwik,
-    range_7681054
+  type RangeFn = (Int, Int) => Seq[Int]
+
+  val solutions: List[(String, RangeFn)] = List(
+    ("7680926", range_7680926),
+    ("mprowaznik", range_mprowaznik),
+    ("ajozwik", range_ajozwik),
+    ("7681054", range_7681054)
   )
 
   def range_7680926(from: Int, to: Int): Seq[Int] = {
