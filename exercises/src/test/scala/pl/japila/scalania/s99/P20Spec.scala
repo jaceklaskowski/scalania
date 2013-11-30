@@ -1,14 +1,20 @@
 package pl.japila.scalania.s99
 
 import org.specs2.mutable._
-import S99_P20.removeAt
+import pl.japila.scalania._
 
-class P20Spec extends Specification {
+class P20Spec extends Specification with ExamplesBlock {
   "P20 solution" should {
     "Remove the Kth element from a list." in {
-      val (ts, t) = removeAt(1, List('a, 'b, 'c, 'd))
-      ts === List('a, 'c, 'd)
-      t === 'b
+      import S99_P20.solutions
+      solutions.map(s => (s"${solutionName(s)} solution", s)).foreach {
+        case (solution, s) =>
+          solution >> {
+            val (ts, t) = s(1, Seq('a, 'b, 'c, 'd))
+            ts === Seq('a, 'c, 'd)
+            t must_== 'b
+          }
+      }
     }
   }
 }

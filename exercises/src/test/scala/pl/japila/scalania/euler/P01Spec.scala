@@ -1,6 +1,7 @@
 package pl.japila.scalania.euler
 
 import org.specs2.mutable._
+import pl.japila.scalania._
 import Euler_P01._
 
 class P01Spec extends Specification with ExamplesBlock {
@@ -12,6 +13,4 @@ class P01Spec extends Specification with ExamplesBlock {
       }
     }
   }
-
-  def solutionName(s: Any) = s.getClass.getSimpleName.split("\\$").drop(1).dropRight(1).mkString("_")
 }

@@ -6,7 +6,7 @@ import S99_P28.lsortFreq
 
 class P28Spec extends Specification {
   "P28a solution" should {
-    " Sort a list of lists according to length of sublists." in {
+    "Sort a list of lists according to length of sublists." in {
       lsort(List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))) === List(List('o), List('d, 'e), List('d, 'e), List('m, 'n), List('a, 'b, 'c), List('f, 'g, 'h), List('i, 'j, 'k, 'l))
     }
   }

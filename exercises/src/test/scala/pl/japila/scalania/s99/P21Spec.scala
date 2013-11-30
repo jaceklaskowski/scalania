@@ -1,12 +1,20 @@
 package pl.japila.scalania.s99
 
 import org.specs2.mutable._
-import S99_P21.insertAt
+import pl.japila.scalania._
 
-class P21Spec extends Specification {
+class P21Spec extends Specification with ExamplesBlock {
   "P21 solution" should {
     "Insert an element at a given position into a list." in {
-      insertAt('new, 1, List('a, 'b, 'c, 'd)) === List('a, 'new, 'b, 'c, 'd)
+      import S99_P21.solutions
+      solutions.map(s => (s"${solutionName(s)} solution", s)).foreach {
+        case (solution, s) =>
+          solution >> {
+            val actual = s('new, 1, Seq('a, 'b, 'c, 'd))
+            val expected = Seq('a, 'new, 'b, 'c, 'd)
+            actual === expected
+          }
+      }
     }
   }
 }
