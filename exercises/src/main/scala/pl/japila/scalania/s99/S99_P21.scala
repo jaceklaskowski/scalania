@@ -1,26 +1,24 @@
 package pl.japila.scalania.s99
 
 object S99_P21 {
-
-  val solutions = Seq[(Any, Int, Seq[Any]) => Seq[Any]](
-    insertAt,
-    insertAt_tboloo,
-    insertAt_7680700,
-    insertAt_PawelPanasewicz,
-    insertAt_ajozwik
+  def solutions[T](): List[(String, (Any, Int, Seq[Any]) => Seq[Any])] = List(
+    ("my own implementation", insertAt),
+    ("tboloo", insertAt_tboloo),
+    ("7680700", insertAt_7680700),
+    ("PawelPanasewicz", insertAt_PawelPanasewicz),
+    ("ajozwik", insertAt_ajozwik)
   )
 
-  def insertAt[T] = (toAdd: T, position: Int, ts: Seq[T]) => ???
+  def insertAt[T](toAdd: T, position: Int, ts: Seq[T]): Seq[Any] = ???
 
-  def insertAt_tboloo[T]: (T, Int, Seq[T]) => Seq[T] =
-    (toAdd: T, position: Int, ts: Seq[T]) => {
-      (position, ts) match {
-        case (0, h :: t) => Seq(toAdd) ++ t
-        case (position, h :: t) => Seq(h) ++ insertAt_tboloo(toAdd, position - 1, t)
-      }
+  def insertAt_tboloo[T](toAdd: T, position: Int, ts: Seq[T]): Seq[Any] = {
+    (position, ts) match {
+      case (0, h :: t) => Seq(toAdd) ++ t
+      case (position, h :: t) => Seq(h) ++ insertAt_tboloo(toAdd, position - 1, t)
     }
+  }
 
-  def insertAt_7680700[T] = (toAdd: T, position: Int, ts: Seq[T]) => {
+  def insertAt_7680700[T](toAdd: T, position: Int, ts: Seq[T]): Seq[Any] = {
     @annotation.tailrec
     def go(n: Int, l: List[T], r: List[T]): List[T] = {
       if (n == 0) l.reverse ::: toAdd :: r
@@ -29,10 +27,10 @@ object S99_P21 {
     go(position, Nil, ts.toList)
   }
 
-  def insertAt_PawelPanasewicz[T] = (toAdd: T, position: Int, ts: Seq[T]) =>
+  def insertAt_PawelPanasewicz[T](toAdd: T, position: Int, ts: Seq[T]): Seq[Any] =
     ts.patch(position, Seq(toAdd), 0)
 
-  def insertAt_ajozwik[T] = (toAdd: T, position: Int, ts: Seq[T]) => {
+  def insertAt_ajozwik[T](toAdd: T, position: Int, ts: Seq[T]): Seq[Any] = {
     def insertToAcc: ((Seq[T], Int), T) => (Seq[T], Int) = {
       (acc, current) =>
         {
