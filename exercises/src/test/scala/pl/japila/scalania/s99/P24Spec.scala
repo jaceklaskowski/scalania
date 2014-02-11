@@ -5,7 +5,7 @@ import org.specs2.mutable._
 class P24Spec extends Specification with ExamplesBlock {
   "P24 solution" should {
     "Lotto: Draw N different random numbers from the set 1..M." in {
-      import S99_P24.solutions
+      import S99_P24.{ testSolutions => solutions }
       solutions[Symbol]().foreach {
         case (solution, lottoImpl) =>
           solution >> {

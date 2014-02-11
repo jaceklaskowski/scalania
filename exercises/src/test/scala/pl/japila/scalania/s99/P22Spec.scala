@@ -6,7 +6,7 @@ import pl.japila.scalania._
 class P22Spec extends Specification with ExamplesBlock {
   "P22 solution" should {
     "Create a list containing all integers within a given range." in {
-      import S99_P22.solutions
+      import S99_P22.{ testSolutions => solutions }
       solutions[Symbol]().foreach {
         case (solution, rangeImpl) =>
           solution >> {

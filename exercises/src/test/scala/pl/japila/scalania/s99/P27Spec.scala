@@ -5,7 +5,7 @@ import org.specs2.mutable._
 class P27Spec extends Specification with ExamplesBlock {
   "P27a solution" should {
     "Group 9 elements of a set into disjoint subsets of 2, 3 and 4 elements." in {
-      import S99_P27.solutions
+      import S99_P27.{ testSolutions => solutions }
       solutions[String]().foreach {
         case (solution, groupImpl) =>
           solution >> {
@@ -20,7 +20,7 @@ class P27Spec extends Specification with ExamplesBlock {
   }
   "P27b solution" should {
     "Group 3 elements of a set into disjoint subsets of 2 and 1 elements. (generalized version)" in {
-      import S99_P27.{ solutions3 => solutions }
+      import S99_P27.{ testSolutions3 => solutions }
       solutions[Int]().foreach {
         case (solution, group3Impl) =>
           solution >> {

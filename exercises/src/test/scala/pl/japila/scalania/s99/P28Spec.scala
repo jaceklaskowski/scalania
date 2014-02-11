@@ -7,7 +7,7 @@ import S99_P28.lsortFreq
 class P28Spec extends Specification with ExamplesBlock {
   "P28a solution" should {
     "Sort a list of lists according to length of sublists." in {
-      import S99_P28.solutions
+      import S99_P28.{ testSolutions => solutions }
       solutions[Symbol]().foreach {
         case (solution, lsortImpl) =>
           solution >> {
@@ -18,7 +18,7 @@ class P28Spec extends Specification with ExamplesBlock {
   }
   "P28b solution" should {
     "Sort lists according to their length frequency" in {
-      import S99_P28.{ solutionsFreq => solutions }
+      import S99_P28.{ testSolutionsFreq => solutions }
       solutions[Symbol]().foreach {
         case (solution, lsortFreqImpl) =>
           solution >> {

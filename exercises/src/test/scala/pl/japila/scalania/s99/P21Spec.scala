@@ -6,7 +6,7 @@ import pl.japila.scalania._
 class P21Spec extends Specification with ExamplesBlock {
   "P21 solution" should {
     "Insert an element at a given position into a list." in {
-      import S99_P21.solutions
+      import S99_P21.{ testSolutions => solutions }
       solutions[Symbol]().foreach {
         case (solution, insertAtImpl) =>
           solution >> {
