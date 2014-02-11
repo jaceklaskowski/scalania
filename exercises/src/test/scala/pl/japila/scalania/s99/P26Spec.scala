@@ -8,7 +8,7 @@ class P26Spec extends Specification {
     "Generate the combinations of 3 distinct objects, chosen from a 4 element list." in {
       val input = List('a, 'b, 'c, 'd)
       val expected = List(List('a, 'b, 'c), List('a, 'b, 'd), List('a, 'c, 'd), List('b, 'c, 'd))
-      combinations(3, input) === expected
+      combinations(3, input).toSet === expected.toSet
     }
     "Generate all the combinations of a committee of 3, chosen from a group of 12 people." in {
       val testspec = "We all know that there are C(12,3) = 220 possibilities (C(N,K) denotes the well-known binomial coefficient). " +
