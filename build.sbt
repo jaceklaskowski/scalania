@@ -6,7 +6,7 @@ version in Global := "0.1.0-SNAPSHOT"
 
 scalaVersion in Global := "2.11.0-RC3"
 
-scalacOptions ++= Seq( "-deprecation", "-unchecked", "-feature")
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 
 scalacOptions in Test ++= Seq("-Yrangepos")
 
