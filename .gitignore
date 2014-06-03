@@ -10,6 +10,8 @@ project/boot/
 project/plugins/project/
 # SBT 0.13.1-RC2
 .history
+.project
+.classpath
 
 # Scala-IDE specific
 .scala_dependencies
@@ -17,6 +19,8 @@ project/plugins/project/
 .DS_Store
 .idea
 .idea_modules/
+.cache
+.worksheet
 
 _site/
 .coveralls.yml
