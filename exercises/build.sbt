@@ -1,12 +1,14 @@
 import de.johoop.jacoco4sbt._
-import JacocoPlugin._
+import JacocoPlugin.jacoco.{settings => jacocoSettings}
+import org.scalastyle.sbt.PluginKeys
+import org.scalastyle.sbt.ScalastylePlugin.{Settings => scalastyleSettings}
 
-name := "scalania-exercises"
+name := s"${(name in Global).value}-exercises"
 
-org.scalastyle.sbt.ScalastylePlugin.Settings
+scalastyleSettings
 
-org.scalastyle.sbt.PluginKeys.config := file("project/scalastyle_config.xml")
+PluginKeys.config := file("project/scalastyle_config.xml")
 
 scalariformSettings
 
-jacoco.settings
+jacocoSettings

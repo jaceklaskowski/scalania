@@ -1,5 +1,3 @@
-name := "scalania"
-
 organization := "pl.japila"
 
 scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
