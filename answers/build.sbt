@@ -1,14 +1,16 @@
 import de.johoop.jacoco4sbt._
-import JacocoPlugin._
+import JacocoPlugin.jacoco.{settings => jacocoSettings}
+import org.scalastyle.sbt.PluginKeys
+import org.scalastyle.sbt.ScalastylePlugin.{Settings => scalastyleSettings}
 
-name := "scalania-answers"
+name := s"${(name in Global).value}-answers"
 
-org.scalastyle.sbt.ScalastylePlugin.Settings
+scalastyleSettings
 
 org.scalastyle.sbt.PluginKeys.config := file("project/scalastyle_config.xml")
 
 scalariformSettings
 
-jacoco.settings
+jacocoSettings
 
 scalaSource in Test := (scalaSource in LocalProject("exercises") in Test).value
