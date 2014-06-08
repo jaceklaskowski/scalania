@@ -2,13 +2,14 @@ package pl.japila.scalania.s99
 
 import org.specs2.mutable._
 import S99_P01.last
+import scala.util.{ Success, Failure }
 
 class P01Spec extends Specification {
   "P01 solution" should {
     "Find the last element of a list" in {
-      last(Nil) == None
-      last(Seq(1)) == Some(1)
-      last(Seq(1, 1, 2, 3, 5, 8)) == Some(8)
+      last(Nil) must beFailedTry.withThrowable[NoSuchElementException]
+      last(Seq(1)) must beSuccessfulTry.withValue(1)
+      last(Seq(1, 1, 2, 3, 5, 8)) must beSuccessfulTry.withValue(8)
     }
   }
 }
