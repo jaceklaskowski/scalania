@@ -1,3 +1,5 @@
+name in Global := "scalania"
+
 version in Global := "0.1.0-SNAPSHOT"
 
 scalaVersion in Global := "2.11.0"
