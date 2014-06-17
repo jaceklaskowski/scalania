@@ -1,13 +1,15 @@
 package pl.japila.scalania.s99
 
+import scala.util.{ Failure, Try }
+
 object S99_P01 {
-  def last[T](ts: List[T]): T =
+  def last[T](ts: Seq[T]): Try[T] =
     ts match {
-      case List(e) => e
+      case List(e) => Try(e)
       case h :: t => last(t)
-      case _ => throw new NoSuchElementException
+      case _ => Failure(new NoSuchElementException)
     }
 
   // FIXME: How to keep alternative solutions?
-  def last_2[A](l: List[A]): A = l.last
+  def last_2[T](ts: Seq[T]): Try[T] = Try(ts.last)
 }
