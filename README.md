@@ -1,5 +1,7 @@
 ## [Scalania](http://scalania.pl) - learn Scala by examples
 
+[![Build Status](https://travis-ci.org/jaceklaskowski/scalania.svg?branch=master)](https://travis-ci.org/jaceklaskowski/scalania) [![Stories in Ready](https://badge.waffle.io/jaceklaskowski/scalania.png?label=ready&title=Ready)](https://waffle.io/jaceklaskowski/scalania)
+
 The project's aim is to smooth your learning path to developing applications in [Scala](http://scala-lang.org).
 It's been very successful during [@WarszawScala](https://twitter.com/WarszawScaLa/) meetups in Warsaw, Poland - see [Scalania](http://scalania.pl) webpage on meetup.
 
