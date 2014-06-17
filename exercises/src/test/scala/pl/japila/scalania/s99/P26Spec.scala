@@ -3,7 +3,7 @@ package pl.japila.scalania.s99
 import org.specs2.mutable._
 import S99_P26.combinations
 
-class P26Spec extends Specification {
+object P26Spec extends Specification {
   "P26 solution" should {
     "Generate the combinations of 3 distinct objects, chosen from a 4 element list." in {
       val input = List('a, 'b, 'c, 'd)

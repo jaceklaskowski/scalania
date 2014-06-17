@@ -3,7 +3,7 @@ package pl.japila.scalania.s99
 import org.specs2.mutable._
 import S99_P09.pack
 
-class P09Spec extends Specification {
+object P09Spec extends Specification {
   "P09 solution" should {
     "Pack consecutive duplicates of list elements into sublists." in {
       val actual = pack(Seq('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))

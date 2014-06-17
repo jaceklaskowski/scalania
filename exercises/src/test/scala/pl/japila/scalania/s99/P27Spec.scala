@@ -4,7 +4,7 @@ import org.specs2.mutable._
 import S99_P27.group3
 import S99_P27.group
 
-class P27Spec extends Specification {
+object P27Spec extends Specification {
   "P27a solution" should {
     "Group 9 elements of a set into disjoint subsets of 2, 3 and 4 elements." in {
       val testspec = "Multinomial coefficients for multisets of 2,3 and 4 elements gives (2,3,4)!=(2+3+4)!/(2!3!4!) = 1260 possibilities"

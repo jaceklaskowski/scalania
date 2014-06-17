@@ -2,9 +2,8 @@ package pl.japila.scalania.s99
 
 import org.specs2.mutable._
 import S99_P01.last
-import scala.util.{ Success, Failure }
 
-class P01Spec extends Specification {
+object P01Spec extends Specification {
   "P01 solution" should {
     "Find the last element of a list" in {
       last(Nil) must beFailedTry.withThrowable[NoSuchElementException]
