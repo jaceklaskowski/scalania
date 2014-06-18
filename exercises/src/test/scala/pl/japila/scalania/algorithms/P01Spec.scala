@@ -2,7 +2,7 @@ package pl.japila.scalania.algorithms
 
 import pl.japila.scalania._
 import P01._
-import org.specs2.mutable.{ExamplesBlock, Specification}
+import org.specs2.mutable.{ ExamplesBlock, Specification }
 
 object P01Spec extends Specification with ExamplesBlock {
   "P01 solution" should {
