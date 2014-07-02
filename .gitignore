@@ -19,4 +19,4 @@ project/plugins/project/
 .idea_modules/
 
 _site/
-
+.coveralls.yml

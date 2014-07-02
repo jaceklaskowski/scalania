@@ -9,3 +9,7 @@ lazy val scalania = project.in(file(".")).aggregate(exercises).settings(
 lazy val exercises = project
 
 lazy val answers = project dependsOn (exercises % "test->test")
+
+instrumentSettings
+
+coverallsSettings
