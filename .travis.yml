@@ -1,6 +1,6 @@
 language: scala
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION answers/scoverage:test coveralls
+  - sbt ++$TRAVIS_SCALA_VERSION answers/scoverage:test answers/coveralls
 scala:
   - 2.11.1
 jdk:
