@@ -13,3 +13,5 @@ lazy val answers = project dependsOn (exercises % "test->test")
 instrumentSettings
 
 coverallsSettings
+
+addCommandAlias("check", ";update ; test:update; answers/scoverage:test; answers/coveralls")

@@ -1,0 +1,1 @@
+addSbtPlugin("com.sksamuel.scoverage" % "sbt-coveralls" % "0.0.5")
