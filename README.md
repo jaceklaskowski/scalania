@@ -1,8 +1,13 @@
-## [Scalania](http://scalania.pl) - learn Scala by examples
+# [Scalania](http://scalania.pl) - learn Scala by examples
 
 [![Build Status](https://travis-ci.org/jaceklaskowski/scalania.svg?branch=master)](https://travis-ci.org/jaceklaskowski/scalania)
 [![Stories in Ready](https://badge.waffle.io/jaceklaskowski/scalania.png?label=ready&title=Ready)](https://waffle.io/jaceklaskowski/scalania)
 [![Coverage Status](https://img.shields.io/coveralls/jaceklaskowski/scalania.svg)](https://coveralls.io/r/jaceklaskowski/scalania)
+
+**[How to get started with the project](#how-to-get-started-with-the-project)** |
+**[How to open the project in IntelliJ IDEA 13.1.3](#how-to-open-the-project-in-intellij-idea-1313)** |
+**[How to contribute](#how-to-contribute)** |
+**[Tools used](#tools-used)**
 
 The project's aim is to smooth your learning path to developing applications in [Scala](http://scala-lang.org).
 It's been very successful during [@WarszawScala](https://twitter.com/WarszawScaLa/) meetups in Warsaw, Poland - see [Scalania](http://scalania.pl) webpage on meetup.
@@ -12,7 +17,7 @@ people learning (and ultimately mastering) Scala while solving problems describe
 
 [The Warszawa Scala User Group](http://www.meetup.com/WarszawScaLa/) uses the project regularly during the meetings.
 
-### How to get started with the project
+## How to get started with the project
 * Download and install the latest version of [sbt](http://www.scala-sbt.org/) or [Typesafe Activator](https://typesafe.com/activator).
 * In the directory where you downloaded (cloned) the `scalania` project, e.g. `~/oss/scalania`, run `sbt` or `activator`
 (depending on the tool you've downloaded to manage the project).
@@ -83,11 +88,11 @@ manifested with `Found 0 errors` and `Found 0 warnings` in the output.
         [success] created: /Users/jacek/oss/scalania/exercises/target/scalastyle-result.xml
         [success] Total time: 1 s, completed Jun 8, 2014 4:15:54 PM
 
-### How to open the project in IntelliJ IDEA 13.1.3
+## How to open the project in IntelliJ IDEA 13.1.3
 
 [IntelliJ IDEA](http://www.jetbrains.com/idea/) supports Scala/sbt projects with [the Scala plugin](http://plugins.jetbrains.com/plugin/?id=1347). Have fun!
 
-### How to contribute
+## How to contribute
 A quite productive approach to master Scala is to further extend the project with new tests that show what the Scala language can offer.
 
 `git clone` [the scalania project](https://github.com/jaceklaskowski/scalania) and send pull requests on GitHub.
@@ -111,7 +116,7 @@ Please use topic branches when sending pull requests rather than committing dire
 
 * (optional) Once the pull request's accepted, delete the branch from the remote repository `git push myfork :euler_100` and from the local repository `git branch -d euler_100`.
 
-### Tools used
+## Tools used
 * http://www.scala-sbt.org/
 * https://github.com/kobmic/plain-scala.g8
 * http://aperiodic.net/phil/scala/s-99/
