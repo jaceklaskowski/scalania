@@ -2,7 +2,7 @@ language: scala
 script:
   - sbt ++$TRAVIS_SCALA_VERSION answers/scoverage:test answers/coveralls
 scala:
-  - 2.11.1
+  - 2.11.2
 jdk:
   - oraclejdk7
 notifications:
