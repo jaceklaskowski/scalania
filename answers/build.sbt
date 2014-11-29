@@ -24,7 +24,3 @@ testOptions in Test := Seq(
   	s.matches(".*P31Spec.*")
   )
 )
-
-instrumentSettings
-
-coverallsSettings
