@@ -17,11 +17,11 @@ object S99_P22 {
     }
     from match {
       case `to` => List(from)
-      case x => List(from) ++ range_7680926(from + 1, to)
+      case _ => List(from) ++ range_7680926(from + 1, to)
     }
   }
 
-  def range_mprowaznik(from: Int, to: Int) = (from to to).toList
+  def range_mprowaznik(from: Int, to: Int): Seq[Int] = (from to to).toList
 
   def range_ajozwik(from: Int, to: Int) = {
     def fromN(n: Int): Stream[Int] = n #:: fromN(n + 1)

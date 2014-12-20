@@ -11,6 +11,7 @@ class P01Spec extends Specification with ScalaCheck {
       last(Nil) must beFailedTry.withThrowable[NoSuchElementException]
       last(Seq(1)) must beSuccessfulTry.withValue(1)
       last(Seq(1, 1, 2, 3, 5, 8)) must beSuccessfulTry.withValue(8)
+      last(Vector(1)) must beSuccessfulTry.withValue(1)
     }
 
     val nonEmptySeqs = Gen.nonEmptyContainerOf[Seq, Int](Gen.choose(1, 100000))

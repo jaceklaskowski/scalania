@@ -5,8 +5,8 @@ import scala.util.{ Failure, Try }
 object S99_P01 {
   def last[T](ts: Seq[T]): Try[T] =
     ts match {
-      case List(e) => Try(e)
-      case h :: t => last(t)
+      case h +: Nil => Try(h)
+      case h +: t => last(t)
       case _ => Failure(new NoSuchElementException)
     }
 
