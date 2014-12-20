@@ -5,7 +5,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/jaceklaskowski/scalania.svg)](https://coveralls.io/r/jaceklaskowski/scalania)
 
 **[How to get started with the project](#how-to-get-started-with-the-project)** |
-**[How to open the project in IntelliJ IDEA 13.1.3](#how-to-open-the-project-in-intellij-idea-1313)** |
+**[How to open the project in IntelliJ IDEA 14.0.2](#how-to-open-the-project-in-intellij-idea-1402)** |
 **[How to contribute](#how-to-contribute)** |
 **[Tools used](#tools-used)**
 
@@ -104,11 +104,13 @@ manifested with `Found 0 errors` and `Found 0 warnings` in the output.
         [success] created: sbt.SettingKey$$anon$4@2726d882
         [success] Total time: 0 s, completed Nov 29, 2014 10:06:58 PM
 
-## How to open the project in IntelliJ IDEA 14.0.1
+## How to open the project in IntelliJ IDEA 14.0.2
 
-[IntelliJ IDEA](http://www.jetbrains.com/idea/) supports Scala/sbt projects with [the Scala plugin](http://plugins.jetbrains.com/plugin/?id=1347). Have fun!
+[IntelliJ IDEA](http://www.jetbrains.com/idea/) supports Scala/sbt projects with [the Scala plugin](http://plugins.jetbrains.com/plugin/?id=1347).
+Install the plugin and have fun!
 
 ## How to contribute
+
 A quite productive approach to master Scala is to further extend the project with new tests that show what the Scala language can offer.
 
 `git clone` [the scalania project](https://github.com/jaceklaskowski/scalania) and send pull requests on GitHub.
@@ -136,6 +138,7 @@ Please use topic branches when sending pull requests rather than committing dire
         $ git branch -d euler_100
 
 ## Tools used
+
 * http://www.scala-sbt.org/
 * https://github.com/kobmic/plain-scala.g8
 * http://aperiodic.net/phil/scala/s-99/
