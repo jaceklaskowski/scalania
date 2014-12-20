@@ -18,10 +18,12 @@ people learning (and ultimately mastering) Scala while solving problems describe
 [The Warszawa Scala Enthusiasts](http://warsawscala.pl/) has been using the project quite regularly during their meetups.
 
 ## How to get started with the project
-* In the directory where you downloaded (cloned) the `scalania` project, e.g. `~/oss/scalania`, run `activator`.
+* In the directory where you downloaded (cloned) the `scalania` project, e.g. `~/oss/scalania`, run `./activator` (on Mac OS/Linux)
+or `activator` (on Windows).
 
-        ➜  scalania git:(master) ✗ ./activator
+        ➜  scalania git:(master) ./activator
         [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
+        [info] Loading project definition from /Users/jacek/dev/oss/scalania/project
         [info] Set current project to scalania (in build file:/Users/jacek/dev/oss/scalania/)
         >
 
@@ -41,15 +43,20 @@ Hint: Use [TAB] while in the activator shell.
         [info]
         [info]
         [info] Total for specification P01Spec
-        [info] Finished in 14 ms
+        [info] Finished in 13 ms
         [info] 2 examples, 2 failures, 0 error
         [info]
-        ...
+        [info] ScalaTest
+        [info] Run completed in 566 milliseconds.
+        [info] Total number of tests run: 0
+        [info] Suites: completed 0, aborted 0
+        [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
+        [info] No tests were executed.
         [error] Failed: Total 2, Failed 2, Errors 0, Passed 0
         [error] Failed tests:
-        [error]         pl.japila.scalania.s99.P01Spec
+        [error] 	pl.japila.scalania.s99.P01Spec
         [error] (exercises/test:testOnly) sbt.TestsFailedException: Tests unsuccessful
-        [error] Total time: 1 s, completed Nov 29, 2014 10:01:27 PM
+        [error] Total time: 1 s, completed Dec 21, 2014 12:35:48 AM
         1. Waiting for source changes... (press enter to interrupt)
 
 Make the test pass (make it green). In the above snippet `pl.japila.scalania.s99.P01Spec` fails because of `an implementation is missing`.
@@ -59,6 +66,8 @@ In this case you'd have to write the implementation of `pl.japila.scalania.s99.S
 
 * Once the test gets green (the *success* shows up as a result of running it), you're *almost* done.
 
+        [info] Formatting 1 Scala source {file:/Users/jacek/dev/oss/scalania/}exercises(compile) ...
+        [info] Compiling 1 Scala source to /Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/classes...
         [info] P01Spec
         [info]
         [info] P01 solution should
@@ -66,25 +75,17 @@ In this case you'd have to write the implementation of `pl.japila.scalania.s99.S
         [info] + Find the last element of a list (ScalaCheck)
         [info]
         [info] Total for specification P01Spec
-        [info] Finished in 14 ms
+        [info] Finished in 13 ms
         [info] 2 examples, 101 expectations, 0 failure, 0 error
         [info]
-        [info] Reading scoverage instrumentation [/Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/scoverage-data/scoverage.coverage.xml]
-        [info] Reading scoverage measurements...
-        [info] Generating scoverage reports...
-        [info] Written Cobertura report [/Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/coverage-report/cobertura.xml]
-        [info] Written XML coverage report [/Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/scoverage-report/scoverage.xml]
-        [info] Written HTML coverage report [/Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/scoverage-report/index.html]
-        [info] Coverage reports completed
-        [info] All done. Coverage was [100.00%]
         [info] ScalaTest
-        [info] Run completed in 716 milliseconds.
+        [info] Run completed in 751 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
         [info] Passed: Total 2, Failed 0, Errors 0, Passed 2
-        [success] Total time: 1 s, completed Nov 29, 2014 10:03:58 PM
+        [success] Total time: 1 s, completed Dec 21, 2014 12:37:07 AM
         2. Waiting for source changes... (press enter to interrupt)
 
 Press `Enter` to interrupt.
@@ -100,9 +101,9 @@ manifested with `Found 0 errors` and `Found 0 warnings` in the output.
         Found 0 errors
         Found 0 warnings
         Found 0 infos
-        Finished in 0 ms
-        [success] created: sbt.SettingKey$$anon$4@2726d882
-        [success] Total time: 0 s, completed Nov 29, 2014 10:06:58 PM
+        Finished in 2 ms
+        [success] created: sbt.SettingKey$$anon$4@6f0b509b
+        [success] Total time: 0 s, completed Dec 21, 2014 12:38:14 AM
 
 ## How to open the project in IntelliJ IDEA 14.0.2
 
