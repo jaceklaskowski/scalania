@@ -108,7 +108,7 @@ manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 ## How to open the project in IntelliJ IDEA 14.0.2
 
 [IntelliJ IDEA](http://www.jetbrains.com/idea/) supports Scala/sbt projects with [the Scala plugin](http://plugins.jetbrains.com/plugin/?id=1347).
-Install the plugin and have fun!
+Install the plugin and then `File > Import Project...`. Have fun!
 
 ## How to contribute
 
