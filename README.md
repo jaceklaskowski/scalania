@@ -96,14 +96,14 @@ Just replace `~exercises` with `answers` to kick it off.
 * In order to finish the exercises, run `exercises/scalastyle` to ensure high quality of your solutions that is 
 manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
-        > exercises/scalastyle
-        Processed 37 file(s)
+        [scalania]> exercises/scalastyle
+        Processed 39 file(s)
         Found 0 errors
         Found 0 warnings
         Found 0 infos
-        Finished in 2 ms
-        [success] created: sbt.SettingKey$$anon$4@6f0b509b
-        [success] Total time: 0 s, completed Dec 21, 2014 12:38:14 AM
+        Finished in 3 ms
+        [success] created: sbt.SettingKey$$anon$4@6bb42550
+        [success] Total time: 0 s, completed Jan 1, 2015 10:11:50 PM
 
 ## How to open the project in IntelliJ IDEA 14.0.2
 
