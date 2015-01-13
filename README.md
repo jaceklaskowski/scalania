@@ -25,85 +25,101 @@ or `activator` (on Windows).
         [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
         [info] Loading project definition from /Users/jacek/dev/oss/scalania/project
         [info] Set current project to scalania (in build file:/Users/jacek/dev/oss/scalania/)
-        >
+        [scalania]>
 
 * Pick a problem to work on. There are quite a few in `exercises/src/main/scala` directory.
 Say, you want to start with `pl.japila.scalania.s99.S99_P01`. Run the corresponding test specification using `~exercises/testOnly *s99.P01*` (the asterisks are important to denote a regular expression).
 Hint: Use [TAB] while in the activator shell.
 
-        > ~exercises/testOnly *s99.P01*
-        [info] P01Spec
+        [scalania]> ~exercises/testOnly *collection.P02*
+        [info] P02Spec
         [info]
-        [info] P01 solution should
-        [info] x Find the last element of a list
-        [error]    an implementation is missing (S99_P01.scala:6)
-        [info]
-        [info] x Find the last element of a list (ScalaCheck)
-        [error]    an implementation is missing (S99_P01.scala:6)
+        [info] P02 solution should
+        [info] x Test whether all elements in Lists in Map[String,List[Int]] hold negatives.
+        [error]    an implementation is missing (P02.scala:4)
         [info]
         [info]
-        [info] Total for specification P01Spec
+        [info] Total for specification P02Spec
         [info] Finished in 13 ms
-        [info] 2 examples, 2 failures, 0 error
+        [info] 1 example, 1 failure, 0 error
         [info]
         [info] ScalaTest
-        [info] Run completed in 566 milliseconds.
+        [info] Run completed in 577 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
-        [error] Failed: Total 2, Failed 2, Errors 0, Passed 0
+        [error] Failed: Total 1, Failed 1, Errors 0, Passed 0
         [error] Failed tests:
-        [error] 	pl.japila.scalania.s99.P01Spec
+        [error]         pl.japila.scalania.collection.P02Spec
         [error] (exercises/test:testOnly) sbt.TestsFailedException: Tests unsuccessful
-        [error] Total time: 1 s, completed Dec 21, 2014 12:35:48 AM
+        [error] Total time: 1 s, completed Jan 13, 2015 7:22:00 AM
         1. Waiting for source changes... (press enter to interrupt)
 
-Make the test pass (make it green). In the above snippet `pl.japila.scalania.s99.P01Spec` fails because of `an implementation is missing`.
+Make the test pass (make it green). In the above snippet `pl.japila.scalania.collection.P02Spec` fails because of `an implementation is missing`.
 That's exactly your assignment - to write the implementation.
 
-In this case you'd have to write the implementation of `pl.japila.scalania.s99.S99_P01` object.
+In this particular case you're supposed to write the implementation of `pl.japila.scalania.collection.P02` object in `exercises` project.
 
-* Once the test gets green (the *success* shows up as a result of running it), you're *almost* done.
+* Once the test becomes green (the *success* shows up as a result of running it), you're *almost* done. Note the number of expectations is `100` that means that there were 100 tests executed against the exercise.
 
+        1. Waiting for source changes... (press enter to interrupt)
         [info] Formatting 1 Scala source {file:/Users/jacek/dev/oss/scalania/}exercises(compile) ...
         [info] Compiling 1 Scala source to /Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/classes...
-        [info] P01Spec
+        [info] P02Spec
         [info]
-        [info] P01 solution should
-        [info] + Find the last element of a list
-        [info] + Find the last element of a list (ScalaCheck)
+        [info] P02 solution should
+        [info] + Test whether all elements in Lists in Map[String,List[Int]] hold negatives.
         [info]
-        [info] Total for specification P01Spec
-        [info] Finished in 13 ms
-        [info] 2 examples, 101 expectations, 0 failure, 0 error
+        [info] Total for specification P02Spec
+        [info] Finished in 11 ms
+        [info] 1 example, 100 expectations, 0 failure, 0 error
         [info]
         [info] ScalaTest
-        [info] Run completed in 751 milliseconds.
+        [info] Run completed in 841 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
-        [info] Passed: Total 2, Failed 0, Errors 0, Passed 2
-        [success] Total time: 1 s, completed Dec 21, 2014 12:37:07 AM
+        [info] Passed: Total 1, Failed 0, Errors 0, Passed 1
+        [success] Total time: 2 s, completed Jan 13, 2015 7:24:08 AM
         2. Waiting for source changes... (press enter to interrupt)
 
 Press `Enter` to interrupt.
 
-Spoiler: There are a few solutions of the exercises that you could execute with `answers/testOnly *s99.P01*`.
+Spoiler: There are a few solutions of the exercises that you could execute with `answers/testOnly *collection.P02*`.
 Just replace `~exercises` with `answers` to kick it off.
+
+        [scalania]> answers/testOnly *collection.P02*
+        [info] P02Spec
+        [info]
+        [info] P02 solution should
+        [info] + Test whether all elements in Lists in Map[String,List[Int]] hold negatives.
+        [info]
+        [info] Total for specification P02Spec
+        [info] Finished in 13 ms
+        [info] 1 example, 100 expectations, 0 failure, 0 error
+        [info]
+        [info] ScalaTest
+        [info] Run completed in 765 milliseconds.
+        [info] Total number of tests run: 0
+        [info] Suites: completed 0, aborted 0
+        [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
+        [info] No tests were executed.
+        [info] Passed: Total 1, Failed 0, Errors 0, Passed 1
+        [success] Total time: 1 s, completed Jan 13, 2015 7:26:27 AM
 
 * In order to finish the exercises, run `exercises/scalastyle` to ensure high quality of your solutions that is 
 manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         [scalania]> exercises/scalastyle
-        Processed 39 file(s)
+        Processed 40 file(s)
         Found 0 errors
         Found 0 warnings
         Found 0 infos
         Finished in 3 ms
-        [success] created: sbt.SettingKey$$anon$4@6bb42550
-        [success] Total time: 0 s, completed Jan 1, 2015 10:11:50 PM
+        [success] created: sbt.SettingKey$$anon$4@64f38212
+        [success] Total time: 0 s, completed Jan 13, 2015 7:26:47 AM
 
 ## How to open the project in IntelliJ IDEA 14.0.2
 
