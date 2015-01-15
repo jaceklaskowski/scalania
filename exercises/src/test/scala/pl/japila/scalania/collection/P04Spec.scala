@@ -7,7 +7,7 @@ class P04Spec extends Specification {
   "groupIndexed" should {
     "Group keys and use their values as indices." in {
       {
-        val input = Map(
+        val input = Seq(
           1 -> 2,
           1 -> 3,
           1 -> 5,
