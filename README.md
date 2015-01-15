@@ -9,17 +9,17 @@
 **[How to contribute](#how-to-contribute)** |
 **[Tools used](#tools-used)**
 
-The project's aim is to smooth your learning path to developing applications in [Scala](http://scala-lang.org).
+The project's aim is to smooth your learning path to master [Scala](http://scala-lang.org) programming language.
 It's been very successful during [@WarszawScala](https://twitter.com/WarszawScaLa/) meetups in Warsaw, Poland - see [Scalania](http://scalania.pl) webpage on meetup.
 
-The project uses [Typesafe Activator](http://typesafe.com/activator) and offers tests and their answers that are all supposed to help
-people learning (and ultimately mastering) Scala while solving problems described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) (package `pl.japila.scalania.s99`) and doing the exercises that accompany the Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html) or are part of [the Project Euler](http://projecteuler.net/problems) (package `pl.japila.scalania.euler`).
+The project uses [Typesafe Activator](http://typesafe.com/activator) and offers tests with answers that are all supposed to help
+people learning (and ultimately mastering) Scala while solving problems described in [S-99: Ninety-Nine Scala Problems](http://aperiodic.net/phil/scala/s-99/) (package `pl.japila.scalania.s99`) and doing the exercises that accompany the Scala course [Scala i programowanie funkcyjne](http://www.grzegorzbalcerek.net/scalafp.html) or are part of [the Project Euler](http://projecteuler.net/problems) (package `pl.japila.scalania.euler`). Recently, examples from StackOverflow have been added.
 
-[The Warszawa Scala Enthusiasts](http://warsawscala.pl/) has been using the project quite regularly during their meetups.
+[Warsaw Scala Enthusiasts](http://warsawscala.pl/) group has been using the project quite regularly during their meetups.
 
 ## How to get started with the project
-* In the directory where you downloaded (cloned) the `scalania` project, e.g. `~/oss/scalania`, run `./activator` (on Mac OS/Linux)
-or `activator` (on Windows).
+
+* In the directory where you downloaded (cloned) the `scalania` project, e.g. `~/oss/scalania`, run `./activator` (on Mac OS/Linux) or `activator` (on Windows).
 
         ➜  scalania git:(master) ./activator
         [info] Loading global plugins from /Users/jacek/.sbt/0.13/plugins
@@ -27,9 +27,11 @@ or `activator` (on Windows).
         [info] Set current project to scalania (in build file:/Users/jacek/dev/oss/scalania/)
         [scalania]>
 
-* Pick a problem to work on. There are quite a few in `exercises/src/main/scala` directory.
-Say, you want to start with `pl.japila.scalania.s99.S99_P01`. Run the corresponding test specification using `~exercises/testOnly *s99.P01*` (the asterisks are important to denote a regular expression).
-Hint: Use [TAB] while in the activator shell.
+* Pick a problem to work on. They are in `exercises/src/main/scala` directory.
+
+    Say, you want to start with `pl.japila.scalania.collection.P02`. Run the corresponding test specification using `~exercises/testOnly *collection.P02*` (the asterisks are important to denote a regular expression).
+    
+    Hint: Use [TAB] while in the activator shell.
 
         [scalania]> ~exercises/testOnly *collection.P02*
         [info] P02Spec
@@ -113,13 +115,13 @@ Just replace `~exercises` with `answers` to kick it off.
 manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         [scalania]> exercises/scalastyle
-        Processed 40 file(s)
+        Processed 41 file(s)
         Found 0 errors
         Found 0 warnings
         Found 0 infos
         Finished in 3 ms
-        [success] created: sbt.SettingKey$$anon$4@64f38212
-        [success] Total time: 0 s, completed Jan 13, 2015 7:26:47 AM
+        [success] created: sbt.SettingKey$$anon$4@5d2800a2
+        [success] Total time: 0 s, completed Jan 15, 2015 9:01:53 AM
 
 ## How to open the project in IntelliJ IDEA 14.0.2
 
