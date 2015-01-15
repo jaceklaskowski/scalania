@@ -1,17 +1,16 @@
 package pl.japila.scalania.collection
 
 import org.scalacheck.Gen
-import org.scalatest.{WordSpec, Matchers}
+import org.scalatest.{ WordSpec, Matchers }
 import org.scalatest.prop.PropertyChecks
 import P01.filterNot
 
 class P01Spec extends WordSpec with Matchers with PropertyChecks {
 
   "filterNot" when {
-
     val truePredicate = (a: Int) => true
     val falsePredicate = (a: Int) => false
-    val parityPredicate = (a: Int) => a%2==0
+    val parityPredicate = (a: Int) => a % 2 == 0
     val testCases =
       Table(
         ("source",        "predicate",      "expectedResult"),
@@ -32,13 +31,12 @@ class P01Spec extends WordSpec with Matchers with PropertyChecks {
       }
     }
 
-
     val TEST_RANGE = 100
     val testSeqs = for (
       x <- Gen.choose(-TEST_RANGE, TEST_RANGE);
       y <- Gen.choose(-TEST_RANGE, TEST_RANGE)
     ) yield {
-      if(x < y) x to y else y to x
+      if (x < y) x to y else y to x
     }
 
     "applied to a random sequence with a predicate being another sequence" should {
