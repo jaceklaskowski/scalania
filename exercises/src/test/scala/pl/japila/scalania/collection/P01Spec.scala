@@ -13,20 +13,21 @@ class P01Spec extends WordSpec with Matchers with PropertyChecks {
     val parityPredicate = (a: Int) => a % 2 == 0
     val testCases =
       Table(
-        ("source",        "predicate",      "expectedResult"),
-        (Seq.empty[Int],  truePredicate,    Seq.empty[Int]),
-        (0 to 2,          falsePredicate,   0 to 2),
-        (0 to 2,          truePredicate,    Seq.empty[Int]),
-        (0 to 7,          (2 to 7).toSet,   0 to 1),
-        (0 to 7,          parityPredicate,  Seq(1,3,5,7))
+        ("source", "predicate", "expectedResult"),
+        (Seq.empty[Int], truePredicate, Seq.empty[Int]),
+        (0 to 2, falsePredicate, 0 to 2),
+        (0 to 2, truePredicate, Seq.empty[Int]),
+        (0 to 7, (2 to 7).toSet, 0 to 1),
+        (0 to 7, parityPredicate, Seq(1, 3, 5, 7))
       )
 
     "applied to source sequence and a predicate" should {
       "be equal to the expected result" in {
         forAll(testCases) {
-          (source: Seq[Int], predicate: Int => Boolean, expectedResult: Seq[Int]) => {
-            filterNot(source, predicate) should be(expectedResult)
-          }
+          (source: Seq[Int], predicate: Int => Boolean, expectedResult: Seq[Int]) =>
+            {
+              filterNot(source, predicate) should be(expectedResult)
+            }
         }
       }
     }
@@ -42,9 +43,10 @@ class P01Spec extends WordSpec with Matchers with PropertyChecks {
     "applied to a random sequence with a predicate being another sequence" should {
       "be equal to first sequence minus second sequence" in {
         forAll(testSeqs, testSeqs) {
-          (source: Seq[Int], filter: Seq[Int]) => {
-            filterNot(source, filter.toSet) should be(source.filterNot(filter.toSet))
-          }
+          (source: Seq[Int], filter: Seq[Int]) =>
+            {
+              filterNot(source, filter.toSet) should be(source.filterNot(filter.toSet))
+            }
         }
       }
     }

@@ -1,7 +1,7 @@
 import sbt._
 
 object Version {
-  val scala     = "2.11.5"
+  val scala     = "2.11.4" // don't change unless collection.P04Spec gets checked it works!
   val scalaTest = "2.2.3"
   val specs2    = "2.4.15"
 }
