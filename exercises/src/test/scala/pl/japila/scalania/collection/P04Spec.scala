@@ -1,27 +1,50 @@
 package pl.japila.scalania.collection
 
-import org.specs2.mutable.Specification
-import P04.groupIndexed
+import org.scalacheck.Gen.{ choose, listOfN, oneOf }
+import org.scalatest.WordSpec
+import org.scalatest.prop.PropertyChecks
+import pl.japila.scalania.collection.P04.groupIndexed
 
-class P04Spec extends Specification {
+class P04Spec extends WordSpec with PropertyChecks {
+
+  val MIN = 1
+  val MAX = 15
+
   "groupIndexed" should {
     "Group keys and use their values as indices." in {
       {
-        val kis = Seq(
-          1 -> 2,
-          1 -> 3,
-          1 -> 5,
-          2 -> 1,
-          2 -> 3,
-          2 -> 4
-        )
-        val expected = Map(
-          1 -> Seq(0, 1, 1, 0, 1),
-          2 -> Seq(1, 0, 1, 1, 0)
-        )
-        groupIndexed(kis) must_=== expected
+        val mapGenerator = for {
+          keyCount <- choose(MIN, MAX)
+          seqSize <- choose(MIN, MAX)
+          sequences <- listOfN(keyCount, listOfN(seqSize, oneOf(0, 1)))
+        } yield {
+          (1 to keyCount).zip(sequences).toMap
+        }
+
+        forAll(mapGenerator) {
+          map =>
+            val inputSeq = encode(map)
+            val grouped = groupIndexed(inputSeq)
+            assert(grouped.forall {
+              case (k, v) =>
+                val mapValues = map.getOrElse(k, Seq())
+                v.reverse.dropWhile(_ == 0) == mapValues.reverse.dropWhile(_ == 0)
+            })
+        }
       }
     }
+  }
+
+  def encode(map: Map[Int, List[Int]]): Seq[(Int, Int)] = map.toSeq.flatMap {
+    case (k, seq) =>
+      val row = seq.zipWithIndex.flatMap {
+        case (v, i) => if (v == 1) {
+          Some(i + 1) // 1 - based
+        } else {
+          None
+        }
+      }
+      row.map(i => (k, i))
   }
 
 }
