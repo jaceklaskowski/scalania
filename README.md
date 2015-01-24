@@ -29,7 +29,7 @@ people learning (and ultimately mastering) Scala while solving problems describe
 
 * Pick a problem to work on. They are in `exercises/src/main/scala` directory.
 
-    Say, you want to start with `pl.japila.scalania.collection.P02`. Run the corresponding test specification using `~exercises/testOnly *collection.P02*` (the asterisks are important to denote a regular expression).
+    Say, you want to start with `pl.japila.scalania.collection.P04`. Run the corresponding test specification using `~exercises/testOnly *collection.P04Spec*` (the asterisks are important as they are a part of a regular expression).
     
     Hint: Use [TAB] while in the activator shell.
 
