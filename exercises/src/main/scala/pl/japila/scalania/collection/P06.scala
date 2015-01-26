@@ -5,7 +5,8 @@ package pl.japila.scalania.collection
  */
  
  /** radek: tried to make it a true one-liner but guess I'm too slim in Scala for that :) */
+ /** radek: but yeah can be even simpler! */
  
 object P06 {
-  def isNumeric(as: Iterable[String]): Boolean = {var out:Boolean=true;x foreach ("""^\d*$""".r findFirstIn _ getOrElse {out=false});out}
+  def isNumeric(as: Iterable[String]): Boolean = {x foreach ("""^\d*$""".r findFirstIn _ getOrElse {return false});true}
 }
