@@ -10,4 +10,4 @@ lazy val exercises = project
 
 lazy val answers = project dependsOn (exercises % "test->test")
 
-addCommandAlias("check", ";update; test:update; project answers; coverage; test; coverageReport; coveralls")
+addCommandAlias("check", "; clean; update; test:update; project answers; coverage; test; coverageReport; coveralls")
