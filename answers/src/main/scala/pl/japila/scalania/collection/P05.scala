@@ -9,7 +9,7 @@ object P05 {
     def groupWhen0(acc: Iterator[List[A]], itr: Iterator[A])(p: (A, A) => Boolean): Iterator[List[A]] = {
       val (dup1, dup2) = itr.duplicate
       val pref = ((dup1.sliding(2) takeWhile { case Seq(a1, a2) => p(a1, a2) }).zipWithIndex collect {
-        case (seq, 0)       => seq
+        case (seq, 0) => seq
         case (Seq(_, a), _) => Seq(a)
       }).flatten.toList
       val newAcc = if (pref.isEmpty) acc else acc ++ Iterator(pref)
