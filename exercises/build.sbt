@@ -1,14 +1,15 @@
 import de.johoop.jacoco4sbt._
 import JacocoPlugin.jacoco.{settings => jacocoSettings}
-import org.scalastyle.sbt.PluginKeys
-import org.scalastyle.sbt.ScalastylePlugin.{Settings => scalastyleSettings}
 
 name := s"${(name in Global).value}-exercises"
 
-scalastyleSettings
-
-PluginKeys.config := file("project/scalastyle_config.xml")
+scalastyleConfig := file("project/scalastyle_config.xml")
+scalastyleFailOnError := true
 
 scalariformSettings
 
 jacocoSettings
+
+scapegoatDisabledInspections := Seq("X")
+scapegoatEnabledInspections := Seq("ArraysToString")
+scapegoatIgnoredFiles := Seq("X")

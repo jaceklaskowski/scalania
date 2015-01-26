@@ -89,39 +89,48 @@ In this particular case you're supposed to write the implementation of `pl.japil
 
 Press `Enter` to interrupt.
 
-Spoiler: There are a few solutions of the exercises that you could execute with `answers/testOnly *collection.P04*`.
+Spoiler: There are a few solutions of the exercises that you could execute with `answers/testOnly *collection.P06*`.
 Just replace `~exercises` with `answers` to kick it off.
 
         [scalania]> answers/testOnly *collection.P06*
-        [info] P04Spec
-        [info] 
-        [info] groupIndexed should
-        [info] + Group keys and use their values as indices.
-        [info] 
-        [info] Total for specification P04Spec
-        [info] Finished in 22 ms
+        [info] [scapegoat] setting output dir to [/Users/jacek/dev/oss/scalania/answers/target/scala-2.11/scapegoat-report]
+        [info] [scapegoat] disabled inspections: X
+        [info] [scapegoat] enabled inspections: ArraysToString
+        [info] [scapegoat] ignored file patterns: X
+        [info] [scapegoat] setting output dir to [/Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/scapegoat-report]
+        [info] [scapegoat] disabled inspections: X
+        [info] [scapegoat] enabled inspections: ArraysToString
+        [info] [scapegoat] ignored file patterns: X
+        [info] P06Spec
+        [info]
+        [info] isNumeric should
+        [info] + Check whether all elements in a sequence are numeric.
+        [info]
+        [info] Total for specification P06Spec
+        [info] Finished in 16 ms
         [info] 1 example, 0 failure, 0 error
-        [info]  
+        [info]
         [info] ScalaTest
-        [info] Run completed in 984 milliseconds.
+        [info] Run completed in 754 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
         [info] Passed: Total 1, Failed 0, Errors 0, Passed 1
-        [success] Total time: 1 s, completed Jan 20, 2015 12:25:04 AM
+        [success] Total time: 1 s, completed Jan 26, 2015 9:11:10 PM
 
 * In order to finish the exercises, run `exercises/scalastyle` to ensure high quality of your solutions that is 
 manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         [scalania]> exercises/scalastyle
-        Processed 43 file(s)
-        Found 0 errors
-        Found 0 warnings
-        Found 0 infos
-        Finished in 6 ms
-        [success] created: sbt.SettingKey$$anon$4@62742c62
-        [success] Total time: 0 s, completed Jan 26, 2015 7:12:17 AM
+        [info] scalastyle using config /Users/jacek/dev/oss/scalania/project/scalastyle_config.xml
+        [info] Processed 43 file(s)
+        [info] Found 0 errors
+        [info] Found 0 warnings
+        [info] Found 0 infos
+        [info] Finished in 5 ms
+        [success] created output: /Users/jacek/dev/oss/scalania/exercises/target
+        [success] Total time: 1 s, completed Jan 26, 2015 9:07:19 PM
 
 ## How to open the project in IntelliJ IDEA 14.0.2
 
