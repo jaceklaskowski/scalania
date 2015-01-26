@@ -29,62 +29,62 @@ people learning (and ultimately mastering) Scala while solving problems describe
 
 * Pick a problem to work on. They are in `exercises/src/main/scala` directory.
 
-    Say, you want to start with `pl.japila.scalania.collection.P04`. Run the corresponding test specification using `~exercises/testOnly *collection.P04Spec*` (the asterisks are important as they are a part of a regular expression).
+    Say, you want to start with `pl.japila.scalania.collection.P06`. Run the corresponding test specification using `~exercises/testOnly *collection.P06Spec*` (the asterisks are important as they are a part of a regular expression).
     
     Hint: Use [TAB] while in the activator shell.
 
-        [scalania]> ~exercises/testOnly *collection.P04Spec*
-        [info] P04Spec
+        [scalania]> ~exercises/testOnly *collection.P06Spec*
+        [info] P06Spec
         [info] 
-        [info] groupIndexed should
-        [info] x Group keys and use their values as indices.
-        [error]    an implementation is missing (P04.scala:4)
+        [info] isNumeric should
+        [info] x Check whether all elements in a sequence are numeric.
+        [error]    an implementation is missing (P06.scala:7)
         [info] 
         [info] 
-        [info] Total for specification P04Spec
-        [info] Finished in 14 ms
+        [info] Total for specification P06Spec
+        [info] Finished in 13 ms
         [info] 1 example, 1 failure, 0 error
         [info]  
         [info] ScalaTest
-        [info] Run completed in 545 milliseconds.
+        [info] Run completed in 582 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
         [error] Failed: Total 1, Failed 1, Errors 0, Passed 0
         [error] Failed tests:
-        [error]         pl.japila.scalania.collection.P04Spec
+        [error]         pl.japila.scalania.collection.P06Spec
         [error] (exercises/test:testOnly) sbt.TestsFailedException: Tests unsuccessful
-        [error] Total time: 1 s, completed Jan 19, 2015 11:02:09 PM
+        [error] Total time: 1 s, completed Jan 25, 2015 10:40:41 PM
         1. Waiting for source changes... (press enter to interrupt)
 
-Make the test pass (make it green). In the above snippet `pl.japila.scalania.collection.P04Spec` fails because of `an implementation is missing`.
+Make the test pass (make it green). In the above snippet `pl.japila.scalania.collection.P06Spec` fails because of `an implementation is missing`.
 That's exactly your assignment - to write the implementation.
 
-In this particular case you're supposed to write the implementation of `pl.japila.scalania.collection.P04` object in `exercises` project.
+In this particular case you're supposed to write the implementation of `pl.japila.scalania.collection.P06` object in `exercises` project.
 
 * Once the test becomes green (the *success* shows up as a result of running it), you're *almost* done. Note the number of expectations is `100` that means that there were 100 tests executed against the exercise.
 
         1. Waiting for source changes... (press enter to interrupt)
         [info] Formatting 1 Scala source {file:/Users/jacek/dev/oss/scalania/}exercises(compile) ...
         [info] Compiling 1 Scala source to /Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/classes...
-        [info] P04Spec
+        [info] P06Spec
         [info] 
-        [info] groupIndexed should
-        [info] + Group keys and use their values as indices.
+        [info] isNumeric should
+        [info] + Check whether all elements in a sequence are numeric.
         [info] 
-        [info] Total for specification P04Spec
-        [info] Finished in 18 ms
+        [info] Total for specification P06Spec
+        [info] Finished in 15 ms
         [info] 1 example, 0 failure, 0 error
         [info]  
         [info] ScalaTest
-        [info] Run completed in 604 milliseconds.
+        [info] Run completed in 689 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
         [info] Passed: Total 1, Failed 0, Errors 0, Passed 1
-        [success] Total time: 1 s, completed Jan 20, 2015 12:20:31 AM
+        [success] Total time: 2 s, completed Jan 26, 2015 7:10:00 AM
         2. Waiting for source changes... (press enter to interrupt)
 
 Press `Enter` to interrupt.
@@ -92,7 +92,7 @@ Press `Enter` to interrupt.
 Spoiler: There are a few solutions of the exercises that you could execute with `answers/testOnly *collection.P04*`.
 Just replace `~exercises` with `answers` to kick it off.
 
-        [scalania]> answers/testOnly *collection.P04*
+        [scalania]> answers/testOnly *collection.P06*
         [info] P04Spec
         [info] 
         [info] groupIndexed should
@@ -115,18 +115,18 @@ Just replace `~exercises` with `answers` to kick it off.
 manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         [scalania]> exercises/scalastyle
-        Processed 41 file(s)
+        Processed 43 file(s)
         Found 0 errors
         Found 0 warnings
         Found 0 infos
-        Finished in 3 ms
-        [success] created: sbt.SettingKey$$anon$4@4779e806
-        [success] Total time: 1 s, completed Jan 20, 2015 12:28:29 AM
+        Finished in 6 ms
+        [success] created: sbt.SettingKey$$anon$4@62742c62
+        [success] Total time: 0 s, completed Jan 26, 2015 7:12:17 AM
 
 ## How to open the project in IntelliJ IDEA 14.0.2
 
 [IntelliJ IDEA](http://www.jetbrains.com/idea/) supports Scala/sbt projects with [the Scala plugin](http://plugins.jetbrains.com/plugin/?id=1347).
-Install the plugin and then `File > Import Project...`. Have fun!
+Install the plugin and then `File > Import Project...`. Select `SBT`, click `Next` and have fun!
 
 It's however highly recommended using [the latest unreleased version of IntelliJ IDEA 14.0.3 EAP](https://confluence.jetbrains.com/display/IDEADEV/IDEA+14+EAP) with [the latest development version of Scala plugin 1.3 EAP](https://confluence.jetbrains.com/display/SCA/Scala+plugin+EAP) since they bring a wealth of very productive features.
 
