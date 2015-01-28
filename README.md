@@ -29,62 +29,72 @@ people learning (and ultimately mastering) Scala while solving problems describe
 
 * Pick a problem to work on. They are in `exercises/src/main/scala` directory.
 
-    Say, you want to start with `pl.japila.scalania.collection.P06`. Run the corresponding test specification using `~exercises/testOnly *collection.P06Spec*` (the asterisks are important as they are a part of a regular expression).
+    Say, you want to start with `pl.japila.scalania.collection.P07`. Run the corresponding test specification using `~exercises/testOnly *collection.P07Spec*` (the asterisks are important as they are a part of a regular expression).
     
     Hint: Use [TAB] while in the activator shell.
 
-        [scalania]> ~exercises/testOnly *collection.P06Spec*
-        [info] P06Spec
+        [scalania]> ~exercises/testOnly *collection.P07Spec*
+        [info] [scapegoat] setting output dir to [/Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/scapegoat-report]
+        [info] [scapegoat] disabled inspections: X
+        [info] [scapegoat] enabled inspections: ArraysToString
+        [info] [scapegoat] ignored file patterns: X
+        [info] P07Spec
         [info] 
-        [info] isNumeric should
-        [info] x Check whether all elements in a sequence are numeric.
-        [error]    an implementation is missing (P06.scala:7)
+        [info] sumOfPrecedingElements should
+        [info] x Sum all preceding elements in a collection.
+        [error]    an implementation is missing (P07.scala:7)
         [info] 
         [info] 
-        [info] Total for specification P06Spec
-        [info] Finished in 13 ms
+        [info] Total for specification P07Spec
+        [info] Finished in 22 ms
         [info] 1 example, 1 failure, 0 error
         [info]  
         [info] ScalaTest
-        [info] Run completed in 582 milliseconds.
+        [info] Run completed in 665 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
         [error] Failed: Total 1, Failed 1, Errors 0, Passed 0
         [error] Failed tests:
-        [error]         pl.japila.scalania.collection.P06Spec
+        [error]         pl.japila.scalania.collection.P07Spec
         [error] (exercises/test:testOnly) sbt.TestsFailedException: Tests unsuccessful
-        [error] Total time: 1 s, completed Jan 25, 2015 10:40:41 PM
+        [error] Total time: 1 s, completed Jan 28, 2015 10:44:15 PM
         1. Waiting for source changes... (press enter to interrupt)
 
-Make the test pass (make it green). In the above snippet `pl.japila.scalania.collection.P06Spec` fails because of `an implementation is missing`.
+Make the test pass (make it green). In the above snippet `pl.japila.scalania.collection.P07Spec` fails because of `an implementation is missing`.
 That's exactly your assignment - to write the implementation.
 
-In this particular case you're supposed to write the implementation of `pl.japila.scalania.collection.P06` object in `exercises` project.
+In this particular case you're supposed to write the implementation of `pl.japila.scalania.collection.P07` object in `exercises` project.
 
 * Once the test becomes green (the *success* shows up as a result of running it), you're *almost* done. Note the number of expectations is `100` that means that there were 100 tests executed against the exercise.
 
         1. Waiting for source changes... (press enter to interrupt)
         [info] Formatting 1 Scala source {file:/Users/jacek/dev/oss/scalania/}exercises(compile) ...
+        [info] [scapegoat] setting output dir to [/Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/scapegoat-report]
+        [info] [scapegoat] disabled inspections: X
+        [info] [scapegoat] enabled inspections: ArraysToString
+        [info] [scapegoat] ignored file patterns: X
         [info] Compiling 1 Scala source to /Users/jacek/dev/oss/scalania/exercises/target/scala-2.11/classes...
-        [info] P06Spec
+        [info] [scapegoat] 107 activated inspections
+        [info] [scapegoat] List(X) ignored file patterns
+        [info] P07Spec
         [info] 
-        [info] isNumeric should
-        [info] + Check whether all elements in a sequence are numeric.
+        [info] sumOfPrecedingElements should
+        [info] + Sum all preceding elements in a collection.
         [info] 
-        [info] Total for specification P06Spec
-        [info] Finished in 15 ms
+        [info] Total for specification P07Spec
+        [info] Finished in 13 ms
         [info] 1 example, 0 failure, 0 error
         [info]  
         [info] ScalaTest
-        [info] Run completed in 689 milliseconds.
+        [info] Run completed in 606 milliseconds.
         [info] Total number of tests run: 0
         [info] Suites: completed 0, aborted 0
         [info] Tests: succeeded 0, failed 0, canceled 0, ignored 0, pending 0
         [info] No tests were executed.
         [info] Passed: Total 1, Failed 0, Errors 0, Passed 1
-        [success] Total time: 2 s, completed Jan 26, 2015 7:10:00 AM
+        [success] Total time: 2 s, completed Jan 28, 2015 10:46:06 PM
         2. Waiting for source changes... (press enter to interrupt)
 
 Press `Enter` to interrupt.
@@ -124,13 +134,13 @@ manifested with `Found 0 errors` and `Found 0 warnings` in the output.
 
         [scalania]> exercises/scalastyle
         [info] scalastyle using config /Users/jacek/dev/oss/scalania/project/scalastyle_config.xml
-        [info] Processed 43 file(s)
+        [info] Processed 44 file(s)
         [info] Found 0 errors
         [info] Found 0 warnings
         [info] Found 0 infos
-        [info] Finished in 5 ms
+        [info] Finished in 1 ms
         [success] created output: /Users/jacek/dev/oss/scalania/exercises/target
-        [success] Total time: 1 s, completed Jan 26, 2015 9:07:19 PM
+        [success] Total time: 0 s, completed Jan 28, 2015 10:48:22 PM
 
 ## How to open the project in IntelliJ IDEA 14.0.2
 
