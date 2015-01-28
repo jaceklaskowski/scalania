@@ -5,7 +5,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/jaceklaskowski/scalania.svg)](https://coveralls.io/r/jaceklaskowski/scalania)
 
 **[How to get started with the project](#how-to-get-started-with-the-project)** |
-**[How to open the project in IntelliJ IDEA 14.0.2](#how-to-open-the-project-in-intellij-idea-1402)** |
+**[How to open the project in IntelliJ IDEA 14.0.3](#how-to-open-the-project-in-intellij-idea-1403)** |
 **[How to contribute](#how-to-contribute)** |
 **[Tools used](#tools-used)**
 
@@ -142,12 +142,10 @@ manifested with `Found 0 errors` and `Found 0 warnings` in the output.
         [success] created output: /Users/jacek/dev/oss/scalania/exercises/target
         [success] Total time: 0 s, completed Jan 28, 2015 10:48:22 PM
 
-## How to open the project in IntelliJ IDEA 14.0.2
+## How to open the project in IntelliJ IDEA 14.0.3
 
 [IntelliJ IDEA](http://www.jetbrains.com/idea/) supports Scala/sbt projects with [the Scala plugin](http://plugins.jetbrains.com/plugin/?id=1347).
 Install the plugin and then `File > Import Project...`. Select `SBT`, click `Next` and have fun!
-
-It's however highly recommended using [the latest unreleased version of IntelliJ IDEA 14.0.3 EAP](https://confluence.jetbrains.com/display/IDEADEV/IDEA+14+EAP) with [the latest development version of Scala plugin 1.3 EAP](https://confluence.jetbrains.com/display/SCA/Scala+plugin+EAP) since they bring a wealth of very productive features.
 
 ## How to contribute
 
