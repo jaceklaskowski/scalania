@@ -1,11 +1,9 @@
 package pl.japila.scalania.collection
 
 import org.scalacheck.Gen.{ choose, listOfN, oneOf }
-import org.scalatest.WordSpec
-import org.scalatest.prop.PropertyChecks
 import pl.japila.scalania.collection.P04.groupIndexed
 
-class P04Spec extends WordSpec with PropertyChecks {
+class P04Spec extends AbstractWordSpec {
 
   val MIN = 1
   val MAX = 15
