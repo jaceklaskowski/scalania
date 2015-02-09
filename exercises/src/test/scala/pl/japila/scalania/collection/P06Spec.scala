@@ -1,19 +1,37 @@
 package pl.japila.scalania.collection
 
-import org.specs2.mutable.Specification
-import P06.isNumeric
+import org.scalacheck.Gen.{alphaStr, listOf, nonEmptyListOf, numStr}
+import pl.japila.scalania.collection.P06.isNumeric
 
-class P06Spec extends Specification {
+import scala.util.Random
+
+class P06Spec extends AbstractWordSpec {
   "isNumeric" should {
     "Check whether all elements in a sequence are numeric." in {
-      {
-        val it = List("sdkfj", "7", "2", "5", "3", "1", "9", "2", "1", "4").toIterable
-        isNumeric(it) must beFalse
+      val numericStringSeqGen = for {
+        sequence <- listOf(numStr)
+      } yield {
+        sequence
       }
-      {
-        val it = List("7", "2", "5", "3", "1", "9", "2", "1", "4").toIterable
-        isNumeric(it) must beTrue
+      forAll(numericStringSeqGen) {
+        list =>
+          isNumeric(list.toIterable) === true
       }
+
+    }
+
+    "Check whether at least one element in a sequence is not numeric." in {
+      val atLeastOneNotNumericGen = for {
+        stringList <- nonEmptyListOf(alphaStr)
+        numList <- listOf(numStr)
+      } yield {
+        Random.shuffle(stringList ++ numList)
+      }
+      forAll(atLeastOneNotNumericGen) {
+        list =>
+          isNumeric(list.toIterable) === false
+      }
+
     }
   }
 
