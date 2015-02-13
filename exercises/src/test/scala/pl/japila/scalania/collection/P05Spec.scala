@@ -1,21 +1,52 @@
 package pl.japila.scalania.collection
 
-import org.specs2.mutable.Specification
-import P05.groupWhen
+import pl.japila.scalania.collection.P05._
+import org.scalacheck.Gen._
+import org.scalacheck.{ Gen, Prop }
+import org.specs2.{ ScalaCheck, mutable }
 
-class P05Spec extends Specification {
+class P05Spec extends mutable.Specification with ScalaCheck {
+
+  def checkRepetition(seq: List[Int]): Boolean = {
+    seq.tail.foldLeft((seq.head, true))((a, b) => (b, a._1 != b && a._2))._2
+  }
+
+  def diffrentListSize(list: List[Int]): Gen[List[Int]] = {
+    val MIN = 1
+    val MAX = 3
+    for {
+      listSize <- choose(MIN, MAX)
+      list <- listOfN(listSize, list.head)
+    } yield {
+      list
+    }
+  }
+
   "groupWhen" should {
     "Consume elements in a collection until a condition is met." in {
       {
-        val it = List(1, 1, 1, 1, 3, 4, 3, 2, 2, 2).iterator
-        val expected = List(List(1, 1, 1, 1), List(2, 2, 2))
-        groupWhen(it)(_ == _).toSeq must_=== expected
+        val MIN = 2
+        val MAX = 5
+        val listGenerator = for {
+          listSize <- choose(MIN, MAX)
+          listOfInts <- listOfN(listSize, choose(1, 10)) suchThat (checkRepetition(_))
+          listOfListOfInts <- listOfInts.map(List(_)).map(diffrentListSize(_).sample.get)
+        } yield {
+          listOfListOfInts
+        }
+        val p1 = Prop.forAll(listGenerator) {
+          list =>
+            groupWhen[Int](list.flatten.iterator)(_ == _).toList must_=== list.filter(_.size > 1)
+        }
+        check(p1)
       }
-      {
-        val it = List(1, 1, 1, 1, 2, 2, 2).iterator
-        val expected = Seq(List(1, 1, 1, 1), List(2, 2, 2))
-        groupWhen(it)(_ == _).toSeq must_=== expected
-      }
+    }
+  }
+  "Consume elements in a collection until a condition is met, even if there is one element." in {
+    {
+      val it = List(1).iterator
+      val expected = List()
+      groupWhen(it)(_ == _).toList must_=== expected
     }
   }
 }
