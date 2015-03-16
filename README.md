@@ -1,5 +1,7 @@
 # [Scalania](http://scalania.pl) - learn Scala by examples
 
+[![Join the chat at https://gitter.im/jaceklaskowski/scalania](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jaceklaskowski/scalania?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/jaceklaskowski/scalania.svg?branch=master)](https://travis-ci.org/jaceklaskowski/scalania)
 [![Stories in Ready](https://badge.waffle.io/jaceklaskowski/scalania.png?label=ready&title=Ready)](https://waffle.io/jaceklaskowski/scalania)
 [![Coverage Status](https://img.shields.io/coveralls/jaceklaskowski/scalania.svg)](https://coveralls.io/r/jaceklaskowski/scalania)
