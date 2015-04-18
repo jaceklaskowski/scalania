@@ -1,8 +1,8 @@
 package pl.japila.scalania.collection
 
 /**
- * Created by jacek on 17/04/15.
+ * Inspired by http://stackoverflow.com/q/29701182/1305344
  */
 object P08 {
-
+  def removeWordsFromSentences(words: Set[String])(sentences: Seq[String]): Seq[String] = ???
 }
