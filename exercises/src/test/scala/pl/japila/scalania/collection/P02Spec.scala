@@ -17,13 +17,13 @@ class P02Spec extends mutable.Specification with ScalaCheck {
   "P02 solution" should {
     "Test whether all elements in Lists in Map[String,List[Int]] hold negatives." in {
       import P02.checkNegatives
-
-      val p1 = Prop.forAll(genMap) { input: Map[String, List[Int]] =>
-        val output = checkNegatives(input)
-        input.keys must_=== output.keys
-        output.keys must contain((key: String) => output(key) must_=== (input(key).forall(_ < 0)))
+      check {
+        Prop.forAll(genMap) { input: Map[String, List[Int]] =>
+          val output = checkNegatives(input)
+          input.keys must_== output.keys
+          output.keys must contain((key: String) => output(key) must_== (input(key).forall(_ < 0)))
+        }
       }
-      check(p1)
     }
   }
 }

@@ -3,7 +3,7 @@ import sbt._
 object Version {
   val scala     = "2.11.6"
   val scalaTest = "2.2.4"
-  val specs2    = "3.5"
+  val specs2    = "2.4.5"
 }
 
 object Library {
@@ -17,10 +17,5 @@ object Dependencies {
 
   import Library._
 
-  val libraries = Seq(
-    specs2Core       % Test,
-    specs2Junit      % Test,
-    specs2ScalaCheck % Test,
-    scalaTest        % Test
-  )
+  val libraries = Seq(specs2Core, specs2Junit, specs2ScalaCheck, scalaTest).map(_ % Test)
 }

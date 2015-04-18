@@ -7,19 +7,16 @@ import org.specs2.{ ScalaCheck, mutable }
 
 class P05Spec extends mutable.Specification with ScalaCheck {
 
-  def checkRepetition(seq: List[Int]): Boolean = {
-    seq.tail.foldLeft((seq.head, true))((a, b) => (b, a._1 != b && a._2))._2
-  }
+  def checkRepetition(ns: List[Int]): Boolean =
+    ns.tail.foldLeft((ns.head, true))((a, b) => (b, a._1 != b && a._2))._2
 
-  def diffrentListSize(list: List[Int]): Gen[List[Int]] = {
+  def differentListSize(ns: List[Int]): Gen[List[Int]] = {
     val MIN = 1
     val MAX = 3
     for {
       listSize <- choose(MIN, MAX)
-      list <- listOfN(listSize, list.head)
-    } yield {
-      list
-    }
+      list <- listOfN(listSize, ns.head)
+    } yield list
   }
 
   "groupWhen" should {
@@ -30,15 +27,13 @@ class P05Spec extends mutable.Specification with ScalaCheck {
         val listGenerator = for {
           listSize <- choose(MIN, MAX)
           listOfInts <- listOfN(listSize, choose(1, 10)) suchThat (checkRepetition(_))
-          listOfListOfInts <- listOfInts.map(List(_)).map(diffrentListSize(_).sample.get)
-        } yield {
-          listOfListOfInts
+          listOfListOfInts <- listOfInts.map(List(_)).map(differentListSize(_).sample.get)
+        } yield listOfListOfInts
+        check {
+          Prop.forAll(listGenerator) { list =>
+            groupWhen[Int](list.flatten.iterator)(_ == _).toList must_== list.filter(_.size > 1)
+          }
         }
-        val p1 = Prop.forAll(listGenerator) {
-          list =>
-            groupWhen[Int](list.flatten.iterator)(_ == _).toList must_=== list.filter(_.size > 1)
-        }
-        check(p1)
       }
     }
   }
@@ -46,7 +41,7 @@ class P05Spec extends mutable.Specification with ScalaCheck {
     {
       val it = List(1).iterator
       val expected = List()
-      groupWhen(it)(_ == _).toList must_=== expected
+      groupWhen(it)(_ == _).toList must_== expected
     }
   }
 }

@@ -1,7 +1,7 @@
 package pl.japila.scalania.collection
 
 import org.scalacheck.Prop
-import org.specs2.{ ScalaCheck, mutable }
+import org.specs2._
 import org.scalacheck.Gen.{ choose, listOfN }
 import P07.sumOfPrecedingElements
 
@@ -22,14 +22,13 @@ class P07Spec extends mutable.Specification with ScalaCheck {
         val MAX = 10
         val seqGenerator = for {
           seqSize <- choose(MIN, MAX)
-          sequences <- listOfN(seqSize, choose(1, 10))
-        } yield {
-          sequences
+          sequences <- listOfN(seqSize, choose(MIN, MAX))
+        } yield sequences
+        check {
+          Prop.forAll(seqGenerator) { seq =>
+            subtractionOfFollowingElements(sumOfPrecedingElements(seq).reverse).reverse must_== seq
+          }
         }
-        val p1 = Prop.forAll(seqGenerator) {
-          seq => subtractionOfFollowingElements(sumOfPrecedingElements(seq).reverse).reverse must_=== seq
-        }
-        check(p1)
       }
     }
   }
