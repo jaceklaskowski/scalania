@@ -3,7 +3,7 @@ package pl.japila.scalania.s99
 import org.specs2.mutable._
 import S99_P16.drop
 
-class P16Spec extends Specification {
+object P16Spec extends Specification {
   "P16 solution" should {
     "Drop every Nth element from a list." in {
       val expected = List('a, 'b, 'd, 'e, 'g, 'h, 'j, 'k)

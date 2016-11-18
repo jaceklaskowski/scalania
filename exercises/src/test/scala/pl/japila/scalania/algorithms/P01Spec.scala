@@ -1,10 +1,10 @@
 package pl.japila.scalania.algorithms
 
-import org.specs2.mutable._
 import pl.japila.scalania._
 import P01._
+import org.specs2.mutable.{ ExamplesBlock, Specification }
 
-class P01Spec extends Specification with ExamplesBlock {
+object P01Spec extends Specification with ExamplesBlock {
   "P01 solution" should {
     "Answer whether given sites are connected" in {
       solutions.map {

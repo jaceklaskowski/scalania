@@ -1,0 +1,11 @@
+language: scala
+script:
+  - sbt ++$TRAVIS_SCALA_VERSION answers/coverage answers/test
+after_success: "sbt ++$TRAVIS_SCALA_VERSION answers/coveralls"
+scala:
+  - 2.11.4
+jdk:
+  - oraclejdk8
+notifications:
+  email:
+    - jacek@japila.pl

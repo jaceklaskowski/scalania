@@ -14,5 +14,5 @@ object P01 {
    *
    * @return true when sites are connected; false otherwise
    */
-  def isConnected = (s1: Site, s2: Site, ls: Seq[Link]) => ???
+  def isConnected(s1: Site, s2: Site, ls: Seq[Link]): Boolean = ???
 }
