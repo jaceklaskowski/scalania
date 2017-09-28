@@ -1,4 +1,4 @@
-# [Scalania] (http://scalania.pl) - Learn Scala by Examples
+# [Scalania] (http://scalania.pl) - Learn Scala by Examples,,,,,,,,,,,,
 
 [![Join the chat at https://gitter.im/jaceklaskowski/scalania](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jaceklaskowski/scalania?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
