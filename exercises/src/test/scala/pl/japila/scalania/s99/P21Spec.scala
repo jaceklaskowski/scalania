@@ -3,9 +3,11 @@ package pl.japila.scalania.s99
 import org.specs2.mutable._
 import pl.japila.scalania._
 
+
 object P21Spec extends Specification with ExamplesBlock {
   "P21 solution" should {
     "Insert an element at a given position into a list." in {
+      //Introduced the Best practice issue
       import S99_P21._
       solutions.foreach {
         case (solution, insertAtImpl) =>
