@@ -1,14 +1,8 @@
-import de.johoop.jacoco4sbt._
-import JacocoPlugin.jacoco.{settings => jacocoSettings}
 
 name := s"${(name in Global).value}-${name.value}"
 
-scalastyleConfig := file("project/scalastyle_config.xml")
-scalastyleFailOnError := true
-
-scalariformSettings
-
-jacocoSettings
+//scalastyleConfig := file("project/scalastyle-config.xml")
+//scalastyleFailOnError := true
 
 scalaSource in Test := (scalaSource in LocalProject("exercises") in Test).value
 
@@ -22,7 +16,7 @@ testOptions in Test := Seq(
   )
 )
 
-scapegoatDisabledInspections := Seq("X")
-scapegoatEnabledInspections := Seq("ArraysToString")
-scapegoatIgnoredFiles := Seq("X")
+//scapegoatDisabledInspections := Seq("X")
+//scapegoatEnabledInspections := Seq("ArraysToString")
+//scapegoatIgnoredFiles := Seq("X")
 

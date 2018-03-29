@@ -1,6 +1,8 @@
 package pl.japila.scalania.s99
 
 object S99_P20 {
+//Introduced unused
+  val UNUSED = 0
 
   type RemoveAtFn = (Int, Seq[Any]) => (Seq[Any], Any)
 
@@ -21,7 +23,8 @@ object S99_P20 {
       }
     }
     )
-    (l.reverse, t.get)
+    //Fix .getOrElse
+    (l.reverse, t.getOrElse(None))
   }
 
 }
